@@ -1,0 +1,11 @@
+course:
+  name:
+    程序设计（II)
+  assignment:
+    title:
+      Simple Markup Language Parser
+    submission:
+      answer:
+        answer.cpp
+      support:
+        main.cpp

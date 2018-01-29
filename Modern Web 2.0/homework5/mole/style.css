@@ -1,0 +1,92 @@
+body
+{
+	text-align: center;
+	font-family: Century Gothic, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+#title
+{
+	font-size: 40px;
+	margin:10px;
+}
+
+#rule
+{
+	font-size: 20px;
+	margin:10px;
+}
+
+#bar
+{
+	width: 500px;
+	margin: 0 auto;
+	font-size: 0;
+	height: 80px;
+}
+
+.inner
+{
+	font-size: 20px;
+	width: 50%;
+	float: left;
+	text-align: right;
+}
+
+input
+{
+	text-align: center;
+	font-size: 15px;
+	background-color: #FFFFFF; 
+	width: 175px;
+}
+
+#instruction
+{
+	width: 700px;
+	margin: 0 auto;
+	text-align: left;
+	font-size: 18px;
+}
+
+#t
+{
+	font-weight: bold;
+}
+
+#map
+{
+	margin: 0 auto;
+	width: 600px;
+	height: 360px;
+	border-top: 1.5px solid grey; 
+	border-bottom: 1.5px solid grey;
+	margin-bottom: 30px; 
+	padding: 20px;
+	font-size: 0;
+}
+
+.lattern
+{
+	width: 40px;
+	height: 40px;
+	margin: 10px;
+	border-radius: 50%;
+	border: 1px solid grey;
+	box-sizing: border-box;
+	background-color: #FFFFFF; 
+	float: left;
+	outline-style: none;
+	cursor: pointer;
+}
+
+#BE
+{
+	text-align: center;
+	font-size: 15px;
+	background-color: #FFFFFF; 
+	width: 180px;
+}
+
+

@@ -1,0 +1,168 @@
+body
+{
+	background: url(http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/background.png?version=1&modificationDate=1268896312000);
+	margin : 0;
+    padding: 0;
+    font-size: 8pt;
+    font-family: Verdana，Tahoma, sans-serif;
+}
+
+h1
+{
+	text-align: center;
+	font-weight: bold;
+	font-size: 24pt;
+	font-family: Tahoma, Verdana, sans-serif;
+}
+
+#banner
+{
+	background: url(http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/bannerbackground.png?version=1&modificationDate=1268896312000);
+	height: 50px;
+	text-align: center;
+}
+
+#all
+{
+	margin: 0 auto;
+	width: 800px;
+	border: 4px solid grey;
+	overflow: hidden;
+}
+
+#left
+{
+	width: 550px;
+	float: left;
+	position: relative;
+}
+
+#right
+{
+	width: 250px;
+	float: left;
+	background-color: #A2B964;
+}
+
+
+
+#top span.k1
+{
+	font-size: 48pt;
+	font-weight: bold;
+	color: red;
+	float: left;
+}
+
+#top span.k2
+{
+	font-size: 8pt;
+	color: #FFFFFF;
+	float: left;
+	position: relative;
+	top: 55px;
+}
+
+#top
+{
+	height: 83px;
+	width: 550px;
+	background: url(http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/rottenbackground.png?version=1&modificationDate=1268896385000);
+}
+
+#top img
+{
+	float: left;
+	height: 83px;
+}
+
+#block
+{
+	font-weight: bold;
+	border: 2px solid grey;
+	background-color: #E1D697; 
+	position: relative;
+	padding:8px;
+	margin-top: 3em;
+	overflow: hidden;
+}
+
+#block img
+{
+	vertical-align: top;
+	float: left;
+	padding-right: 5px;
+	margin-top: -2px;
+}
+
+span.name
+{
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+}
+span.site
+{
+	font-style: italic;
+}
+
+
+#inleft
+{
+	float: left;
+	width: 47%;
+	position: absolute;
+	margin-left: 2%; 
+	margin-top: 2%;
+
+}
+#inright
+{
+	float: right;
+	margin-right: 2%;
+	margin-top: 2%;
+	width: 47%;
+}
+
+
+#inleft p img, #inright p img
+{
+	padding-right: 5px;
+}
+
+
+.first
+{
+	margin-top: 0% !important;
+}
+
+#right dl
+{
+	font-family: Arial, sans-serif;
+	font-size: 8pt; 
+	position: relative;
+	margin-left: 10px;
+}
+#right dt
+{
+	font-weight: bold;
+	margin-top: 10px;
+	margin-top: 1em;
+}
+
+#bottom
+{
+	float: left;
+	width: 800px;
+	text-align: center;
+	background-color: #A2B964;
+	padding: 5px;
+	clear: both;
+}
+
+#photo
+{
+	position: fixed;
+	bottom: 0px;
+	right: 1px;
+}

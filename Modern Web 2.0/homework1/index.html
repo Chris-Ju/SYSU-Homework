@@ -1,0 +1,39 @@
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="index.css">
+<embed src="http://www.kuwo.cn/yinyue/849867?catalog=yueku2016" loop="true" hidden="true" autostart="true">
+<title>index</title>
+
+<script type="text/javascript">
+	function disptime()
+	{
+		var today = new Date();
+		var hh = today.getHours();
+		var mm = today.getMinutes();
+		var ss = today.getSeconds();
+
+		document.getElementById("myclock").innerHTML="<h1>Time："+hh+":"+mm+":"+ss+"</h1>";
+		var myTime=setTimeout("disptime()",1000);
+	}
+
+</script>
+</head>
+
+<body onload="disptime()">
+<div id="myclock"></div>
+
+<a href="pie.html">
+	<p>Click here to get my homework!</p>
+</a>
+
+
+<img src="http://img3.100bt.com/upload/ttq/20120810/1344565339352.jpg" alt="Look very dilicious!"
+style="float: left;">
+
+<p>吃派了，吃派了！</p>
+
+</body>
+</html>

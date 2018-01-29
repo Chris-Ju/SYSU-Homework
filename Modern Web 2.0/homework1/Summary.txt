@@ -1,0 +1,19 @@
+## Something in Recipe
+
+[Click here to get code!](https://github.com/Chris-Ju/Modern-Web-Programming/tree/master/homework1)
+
+#### ABOUT CSS
+	link in head is a must. <link rel="stylesheet" type="text/css" href=Your file url.>
+	All html Tag can be rewriten in css. You can add any format you want.
+
+#### PT PX EM
+	pt --- point Absolute length. Usually use on font.
+	px --- pixel Relative length. Rely on screen.
+	em --- unit of relative length. Relative length. 
+
+#### FONT
+	###### Generic font: Font family. Including serif, sans-serif, monospace, cursive.
+	[The difference between Serif and Sans Serif](http://kb.cnblogs.com/page/192018/)
+
+*Hint: The first homework is so easy, don't mind your grade.*
+

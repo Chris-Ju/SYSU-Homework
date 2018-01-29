@@ -1,0 +1,10 @@
+<course>
+  <name>程序设计（II)</name>
+  <assignment>
+    <title>Simple Markup Language Parser</title>
+    <submission>
+      <answer>answer.cpp</answer>
+      <support>main.cpp</support>
+    </submission>
+  </assignment>
+</course>

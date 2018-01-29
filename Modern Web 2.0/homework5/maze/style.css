@@ -1,0 +1,122 @@
+body
+{
+	text-align: center;
+	font-family: Century Gothic, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+#gameName
+{
+	font-size: 40px;
+	margin:10px;
+}
+
+#rule
+{
+	font-size: 30px;
+	margin:10px;
+}
+#warning
+{
+	font-size: 30px;
+	margin: 10px;
+	opacity: 0;
+	transition: all 1s;
+}
+
+#map
+{
+	width: 640px;
+	height: 400px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0;
+}
+
+#tips
+{
+	text-align: left;
+	width: 700px;
+	margin: auto;
+}
+
+
+#wall
+{
+	text-align: center;
+	width: 80px;
+	height: 25px;
+	border: solid 1px;
+	margin: auto;
+	margin-top: 15px; 
+	margin-bottom: 15px;
+	background-color: #EAEAEA;
+
+}
+
+.roads
+{
+	cursor: pointer;
+}
+
+.walls
+{
+	background-color: #EAEAEA;
+	transition: all 0.3s;
+}
+
+.lattice
+{
+	width: 80px;
+	height: 80px;
+	box-sizing: border-box;
+	float: left;
+}
+.l
+{
+	border-left: 1px solid; 
+}
+
+.r
+{
+	border-right: 1px solid; 
+}
+
+.t
+{
+	border-top: 1px solid;
+}
+
+.b
+{
+	border-bottom: 1px solid;
+}
+
+#S
+{
+	font-size: 60px;
+	font-weight: bold;
+	width: 70px;
+	height: 70px;
+	border: 1px solid;
+	margin-top: 5px;
+	box-sizing: border-box;
+	background-color: #98FB98;
+}
+
+#E
+{
+	font-size: 60px;
+	font-weight: bold;
+	width: 70px;
+	height: 70px;
+	border: 1px solid;
+	margin-top: 5px;
+	box-sizing: border-box;
+	background-color: #9F79EE;
+	margin-left: 10px;
+	
+}

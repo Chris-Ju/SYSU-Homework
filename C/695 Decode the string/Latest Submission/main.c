@@ -1,0 +1,56 @@
+#include<stdio.h>
+#include<math.h>
+#include<string.h>
+int main()
+{
+    char string[100];
+    int num,no,word,wei,bri,time,times;
+    scanf("%s",string);
+    num=strlen(string);
+    for(no=0;no<num;)
+    {
+        word=no;
+        wei=0;
+        bri=0;
+        times=0;
+        if(string[no]>=48&&string[no]<=57)
+        {
+            wei++;
+            string[no]-=48;
+            no++;
+            if(string[no]>=48&&string[no]<=57)
+            {
+                string[no]-=48;
+                wei++;
+                no++;
+                if(string[no]>=48&&string[no]<=57)
+                {
+                    string[no]-=48;
+                    wei++;
+                    no++;
+                    if(string[no]>=48&&string[no]<=57)
+                    {
+                        string[no]-=48;
+                        wei++;
+                        no++;
+                    }
+                }
+            }
+            for(time=1;time<=wei;time++)
+                bri+=pow(10,wei-time)*string[word+time-1];
+            if(bri>7)
+                times=bri%7+1;
+            else
+                times=bri;
+            for(time=1;time<times;time++)
+                printf("%c",string[word-1]);
+        }
+        else    
+        {
+            printf("%c",string[no]);
+            no++;
+        }
+    }
+    printf("\n");
+    return 0;
+}

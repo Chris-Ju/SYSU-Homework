@@ -1,0 +1,101 @@
+#photo
+{
+	text-align: center;
+	width: 360px;
+	height: 360px;
+	border: 3px solid grey;
+	position: relative;
+	float: left;
+	margin-left: 40px;
+}
+
+#prePhoto
+{
+	float: left;
+	width: 360px;
+	height: 360px;
+	border: 2px solid grey;
+	background: url("panda.jpg");
+}
+
+#main
+{
+	width: 770px;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.inner
+{
+	width: 88px;
+	height: 88px;
+	border: 1px solid;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	margin: 1px;
+	background: url("panda.jpg");
+	position: absolute;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.inner:hover
+{
+	transform: scale(1.05);
+}
+
+#buttons 
+{
+	text-align: center;
+	margin: 0 auto;
+	width: 500px;
+	height: 20px;
+	margin-top: 20px;
+
+
+}
+
+#start
+{
+	width: 100px;
+	height: 40px;
+	font-size: 30px;
+	font-family: Century Gothic;
+	cursor: pointer;
+	color: red;
+
+}
+
+#end
+{
+	width: 100px;
+	height: 40px;
+	font-size: 30px;
+	font-family: Century Gothic;
+	cursor: pointer;
+	color: red;
+	margin-left: 100px;
+}
+
+#title
+{
+	font-size: 50px;
+	text-align: center;
+}
+
+body
+{
+	background-color: #FFFFF0;
+}
+
+.bar 
+{
+    float: left;
+    width: 180px;
+    font-size: 30px;
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 30px;
+    font-family: Century Gothic;
+}

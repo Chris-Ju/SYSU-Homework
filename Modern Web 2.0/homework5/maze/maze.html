@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Maze</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="style.js"></script>
+</head>
+<body>
+	<div id="gameName">The Amazing Mouse Maze!</div>
+	<div id="rule">Move your mouse over the "S" to begin.</div>
+	<div id="warning">Don't cheat, you should start form the 'S' and move to the 'E' inside the maze!</div>
+	<div id="map">
+		<div class="lattice walls l t"></div><div class="lattice walls t"></div>
+		<div class="lattice walls t"></div><div class="lattice walls t"></div>
+		<div class="lattice walls t"></div><div class="lattice walls t"></div>
+		<div class="lattice walls t"></div><div class="lattice walls t r"></div>
+		<div class="lattice walls l"></div><div class="lattice walls"></div>
+		<div class="lattice roads l t"></div><div class="lattice roads t b"></div>
+		<div class="lattice roads t b"></div><div class="lattice roads t r"></div>
+		<div class="lattice walls"></div><div class="lattice walls r"></div>
+		<div class="lattice walls l"></div><div class="lattice walls"></div>
+		<div class="lattice roads l r"></div><div class="lattice walls"></div>
+		<div class="lattice walls"></div><div class="lattice roads l r"></div>
+		<div class="lattice walls"></div><div class="lattice walls r"></div>
+		<div class="lattice roads t b"><div id="S">S</div></div>
+		<div class="lattice roads t b"></div><div class="lattice roads b r">
+		</div><div class="lattice walls"></div><div class="lattice walls"></div>
+		<div class="lattice roads l b"></div><div class="lattice roads b t"></div>
+		<div class="lattice roads t b"><div id="E">E</div></div>
+		<div class="lattice walls l b"></div><div class="lattice walls b"></div>
+		<div class="lattice walls b"></div><div class="lattice walls b"></div>
+		<div class="lattice walls b"></div><div class="lattice walls b"></div>
+		<div class="lattice walls b"></div><div class="lattice walls b r"></div>
+
+	</div>
+	<div id="tips">The object of this game is to guide the mouse cursor through the start area and get to the end area.Be sure to avoid th walls:
+	<div id="wall"></div>
+	Good luck!</div>
+</body>
+</html>
