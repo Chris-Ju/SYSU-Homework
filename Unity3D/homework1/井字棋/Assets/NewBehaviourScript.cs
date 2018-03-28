@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    private string[,] buttonText = new string[3, 3];//button上显示的内容
-    private int term = 0;//记录是谁的回合
-    private string result = "Playing";//显示的结果
-    private int AI_X = -1;//AI 要下的格子的行号
-    private int AI_Y = -1;//AI 要下的格子的列号
+    private string[,] buttonText = new string[3, 3];
+    private int term = 0;
+    private string result = "Playing";
+    private int AI_X = -1;
+    private int AI_Y = -1;
     void Start()
     {
         for (int i = 0; i < 3; i++)
-        { //初始化buttonText
+        { 
             for (int j = 0; j < 3; j++)
             {
                 buttonText[i, j] = "";
@@ -35,13 +35,13 @@ public class NewBehaviourScript : MonoBehaviour
             }
         }
         if (num == 9 && result == "Playing")
-        {//判断是否和局
+        {
             result = "All loser!";
         }
         GUI.color = Color.white;
         GUI.TextArea(new Rect(295, 200, 160, 25), result, 200, "font-size:20px");
         if (GUI.Button(new Rect(235, 250, 160, 30), "Reset"))
-        {//重置
+        {
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 3; j++)
@@ -55,13 +55,13 @@ public class NewBehaviourScript : MonoBehaviour
         };
         GUI.color = Color.black;
         if (term == 1 && result == "Playing")
-        {//AI的回合
+        {
             for (int i = 0; i < 3; i++)
             {
                 int count = 0;
                 int user_x = -1;
                 int user_y = -1;
-                //以下是AI判断是否有机会取胜
+            
                 for (int j = 0; j < 3; j++)
                 {
                     if (buttonText[i, j] == "")
