@@ -8,7 +8,7 @@
     - 下载完成之后，选择需要安装的环境，这里我使用的是 C# 开发，默认选项。
     - 所有的语言入门都是 Hello World，所有的环境也是这样。
         - 点击新建项目，这里引用课件 ppt 里的一个图片
-        ![](http://www.rowtoolong.cn/wp-content/uploads/2018/03/HelloWorld-300x183.png)
+        ![](https://github.com/Chris-Ju/Picture/blob/master/HelloWorld.png?raw=true)
         - Visual Studio 自动帮你生成好了框架，只需要往里面写代码就好了，我们来介绍一下文件的结构。
             - App.xaml : 包含了一个全局可用的ResourceDictionary 对象。为了样式化各种用户界面控件，必须在这个文件中声明样式，应用程序中的任何页面都可以自动使用这些样式
             - App.xaml.cs : 此代码隐藏文件包含了重要的应用程序事件的事件处理程序，如启动、挂起和其他一些。
@@ -137,7 +137,7 @@
         - 实现Update、Delete函数
         - 在窄屏显示一列的情况下删除或添加后要跳转到Mainpage界面
 - #### 首先来介绍 Adaptive UI
-    - 我觉得这是我学完三周 C# 最有意思的地方了，Blend for Visual Studio 为我们提供了很好地帮助，只需要点击状态，手动即可完成 VisualState 的实现。需要注意的是，我们可以修改的是保持该状态的最小宽度或者高度，意味着如果我们需要实现作业内容，则需要设置 0 px， 600 px， 800 px 三个档。实现代码如下：( 代码其实非常容易理解 )![](http://www.rowtoolong.cn/wp-content/uploads/2018/03/VisualStateGroup-300x197.jpg)
+    - 我觉得这是我学完三周 C# 最有意思的地方了，Blend for Visual Studio 为我们提供了很好地帮助，只需要点击状态，手动即可完成 VisualState 的实现。需要注意的是，我们可以修改的是保持该状态的最小宽度或者高度，意味着如果我们需要实现作业内容，则需要设置 0 px， 600 px， 800 px 三个档。实现代码如下：( 代码其实非常容易理解 )![](https://github.com/Chris-Ju/Picture/blob/master/VisualStateGroup.jpg?raw=true)
     ``` xml
     <VisualStateManager.VisualStateGroups>
         <VisualStateGroup x:Name="VisualStateGroup">
@@ -173,7 +173,7 @@
         MVVM有助于将图形用户界面的开发与业务逻辑或后端逻辑（数据模型）的开发分离开来，这是通过置标语言或GUI代码实现的。MVVM的视图模型是一个值转换器，这意味着视图模型负责从模型中暴露（转换）数据对象，以便轻松管理和呈现对象。在这方面，视图模型比视图做得更多，并且处理大部分视图的显示逻辑。视图模型可以实现中介者模式，组织对视图所支持的用例集的后端逻辑的访问。
         ```
     - 这都是什么东西，能不能上个图，好的老板！
-        ![](http://www.rowtoolong.cn/wp-content/uploads/2018/03/MVVM.png)
+        ![](https://github.com/Chris-Ju/Picture/blob/master/MVVM.png?raw=true)
     - 我觉得通过图片其实就可以很清晰的理解这个模式了，简而言之 Model 中储存的为模板，ViewModel 中为对模板的操作，View 就是我们的 Page。
     - 先来看模板
 
