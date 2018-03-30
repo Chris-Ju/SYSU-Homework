@@ -1,0 +1,100 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="MyList.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyList"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:md="using:MyList.Models"
+    mc:Ignorable="d">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton x:ConnectionId='2' x:Name="AddAppBarButton" Icon="Add" Label="Add"                               />
+            <AppBarButton x:ConnectionId='3' x:Name="DeleteAppBarButton" Icon="Delete" Label="Delete"                                  Visibility="Collapsed" />
+        </CommandBar>
+    </Page.BottomAppBar>
+    <ScrollViewer HorizontalScrollBarVisibility="Auto">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:ConnectionId='4' x:Name="VisualStateGroup">
+                <VisualState x:ConnectionId='5' x:Name="Up800px">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:ConnectionId='6' x:Name="Between600_800">
+                    <VisualState.Setters>
+                        <Setter Target="Grid_2.(UIElement.Visibility)" Value="Collapsed"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:ConnectionId='7' x:Name="Below600px">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="Grid_2.(UIElement.Visibility)" Value="Collapsed"/>
+                        <Setter Target="Temp_1.(UIElement.Visibility)" Value="Collapsed"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
+        <Grid x:ConnectionId='8' x:Name="All">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="480"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <ListView x:ConnectionId='9' IsItemClickEnabled="True"                               
+                                                             >
+                <ListView.ItemTemplate>
+                    <DataTemplate                         >
+                        <Grid x:ConnectionId='22' x:Name="Grid_1" Grid.Column="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30" />
+                                <ColumnDefinition Width="32" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <CheckBox x:Name="checkBox" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Height="20" Width="20" />
+                            <Image x:ConnectionId='23' x:Name="image" Grid.Row="1" Grid.Column="2"                          Height="90" Width="90" Margin="0 0 20 20" Visibility="{Binding Visibility, ElementName=Temp_1}"/>
+                            <TextBlock x:ConnectionId='24' x:Name="textBlock" Grid.Row="1" Grid.Column="3"                        VerticalAlignment="Center" Foreground="Black" FontSize="36"/>
+                            <Line x:Name="Line_1" Width="250" Grid.Row="1" Grid.Column="3" Stretch="Fill" Stroke="Black" StrokeThickness="2" X1="1" VerticalAlignment="Center"  Visibility="{Binding IsChecked, ElementName=checkBox}"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Grid x:ConnectionId='10' x:Name="Grid_2" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="320"  />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="180" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <AppBarButton x:ConnectionId='12' Grid.Column="1" Grid.Row="1" Icon="Pictures" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="260,120,0,0" Width="25" Height="35"                                  />
+                <Button x:ConnectionId='13' Grid.Row="2" Grid.Column="1" x:Name="CreateBar" Content="Create" HorizontalAlignment="Left" Margin="0,400,0,0" VerticalAlignment="Top" Height="30" Width="80"                       />
+                <TextBox x:ConnectionId='14' Grid.Row="2" Grid.Column="1" x:Name="Title" HorizontalAlignment="Left" Margin="0,30,0,0" Text="" VerticalAlignment="Top" Height="20" Width="320"/>
+                <TextBlock x:ConnectionId='15' Grid.Row="2" Grid.Column="1" x:Name="textBlock1" HorizontalAlignment="Left" Margin="0,0,0,0" Text="Title" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+                <TextBlock x:ConnectionId='16' Grid.Row="2" Grid.Column="1" x:Name="textBlock2" HorizontalAlignment="Left" Margin="0,100,0,0" Text="Details" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+                <TextBox x:ConnectionId='17' Grid.Row="2" Grid.Column="1" x:Name="Detail" HorizontalAlignment="Left" Margin="0,130,0,0" Text="" VerticalAlignment="Top" Height="110" Width="320" TextWrapping="Wrap"/>
+                <TextBlock x:ConnectionId='18' Grid.Row="2" Grid.Column="1" x:Name="textBlock3" HorizontalAlignment="Left" Margin="0,300,0,0" Text="Due Date" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+                <Button x:ConnectionId='19' Grid.Row="2" Grid.Column="1" x:Name="CancelBar" Content="Cancel" HorizontalAlignment="Right" Margin="0,400,0,0" VerticalAlignment="Top" Height="30" Width="80"                       />
+                <DatePicker x:ConnectionId='20' Grid.Row="2" Grid.Column="1" x:Name="Date" Margin="0,270,0,0" HorizontalAlignment="Center" Width="320"/>
+                <Image x:ConnectionId='21' x:Name="Icon" Grid.Column="1" Grid.Row="1" Source="Assets/background.jpg" HorizontalAlignment="Left" Height="100" Margin="110,15,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="100"/>
+            </Grid>
+            <Grid>
+                <Line x:ConnectionId='11' x:Name="Temp_1" Grid.Column="0" Stroke="White" />
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</Page>
+
