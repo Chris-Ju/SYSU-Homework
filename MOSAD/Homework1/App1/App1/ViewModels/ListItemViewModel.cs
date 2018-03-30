@@ -46,6 +46,7 @@ namespace App1.ViewModels
                     item.title = title;
                     item.description = description;
                     item.date = date;
+                    item.source = source;
                     break;
                 }
             }
