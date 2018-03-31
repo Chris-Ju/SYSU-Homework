@@ -3,6 +3,7 @@
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="IsChecked" />
     <RootPropertyPathName Name="Visibility" />
+    <RootPropertyPathName Name="completed" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -128,9 +129,11 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
+      <RootProperty Name="IsChecked" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="ElementName" />
+      <RootProperty Name="Mode" />
     </RootType>
     <RootType FullName="MyList.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.SplitView">

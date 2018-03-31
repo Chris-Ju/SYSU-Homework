@@ -30,16 +30,14 @@ namespace MyList
         /// </summary>
 
         public bool issuspend = false;
-
+        
         public App()
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
             this.Resuming += OnResuming;
-
-
         }
-        
+
         /// <summary>
         /// 在应用程序由最终用户正常启动时进行调用。
         /// 将在启动应用程序以打开特定文件等情况下使用。
@@ -47,32 +45,32 @@ namespace MyList
         /// <param name="e">有关启动请求和过程的详细信息。</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+            ApplicationExecutionState previousState = e.PreviousExecutionState;
+            ActivationKind activationKind = e.Kind;
             Frame rootFrame = Window.Current.Content as Frame;
-            
+
             // 不要在窗口已包含内容时重复应用程序初始化，
             // 只需确保窗口处于活动状态
+            
             if (rootFrame == null)
             {
                 // 创建要充当导航上下文的框架，并导航到第一页
                 rootFrame = new Frame();
-
                 rootFrame.NavigationFailed += OnNavigationFailed;
                 rootFrame.Navigated += OnNavigated;
                 SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
                     //TODO: 从之前挂起的应用程序加载状态
-                    if(ApplicationData.Current.LocalSettings.Values.ContainsKey("NavigationState"))
+                    if (ApplicationData.Current.LocalSettings.Values.ContainsKey("NavigationState"))
                     {
                         rootFrame.SetNavigationState((string)ApplicationData.Current.LocalSettings.Values["NavigationState"]);
 
                     }
                 }
-
                 // 将框架放在当前窗口中
                 Window.Current.Content = rootFrame;
             }
-
             if (e.PrelaunchActivated == false)
             {
                 if (rootFrame.Content == null)
@@ -84,7 +82,9 @@ namespace MyList
                 }
                 // 确保当前窗口处于活动状态
                 Window.Current.Activate();
+
             }
+
         }
 
         /// <summary>
@@ -110,7 +110,7 @@ namespace MyList
             //TODO: 保存应用程序状态并停止任何后台活动
             issuspend = true;
             Frame frame = Window.Current.Content as Frame;
-            ApplicationData.Current.LocalSettings.Values["NavigitionState"] = frame.GetNavigationState();
+            ApplicationData.Current.LocalSettings.Values["NavigationState"] = frame.GetNavigationState();
             deferral.Complete();
         }
         private void OnNavigated(object sender, NavigationEventArgs e)
@@ -120,12 +120,13 @@ namespace MyList
                     AppViewBackButtonVisibility.Visible :
                     AppViewBackButtonVisibility.Collapsed;
         }
+
         private void OnBackRequested(object sender, BackRequestedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
             if (rootFrame == null) return;
 
-            if(rootFrame.CanGoBack && e.Handled == false)
+            if (rootFrame.CanGoBack && e.Handled == false)
             {
                 e.Handled = true;
                 rootFrame.GoBack();

@@ -42,21 +42,22 @@ namespace MyList
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             this.ViewModel = ViewModels.TodoViewModels.GetInstance();
-            if (ViewModel.SelectedItem == null)
-            {
-                return;
-            }
-            else
-            {
-                CreateBar.Content = "Update";
-                DeleteAppBarButton.Visibility = Visibility.Visible;
-                Title.Text = ViewModel.SelectedItem.title;
-                Detail.Text = ViewModel.SelectedItem.description;
-                Date.Date = ViewModel.SelectedItem.date;
-            }
+            
             if (e.NavigationMode == NavigationMode.New)
             {
                 ApplicationData.Current.LocalSettings.Values.Remove("NewPage");
+                if (ViewModel.SelectedItem == null)
+                {
+                    return;
+                }
+                else
+                {
+                    CreateBar.Content = "Update";
+                    DeleteAppBarButton.Visibility = Visibility.Visible;
+                    Title.Text = ViewModel.SelectedItem.title;
+                    Detail.Text = ViewModel.SelectedItem.description;
+                    Date.Date = ViewModel.SelectedItem.date;
+                }
             }
             else
             {
@@ -69,6 +70,7 @@ namespace MyList
                     ///Icon.Source = (ImageSource)composite["image"];
                     ///View_Model = (ViewModels.TodoViewModels)composite["viewModel"];
                     ApplicationData.Current.LocalSettings.Values.Remove("NewPage");
+                    SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
                 }
             }
         }

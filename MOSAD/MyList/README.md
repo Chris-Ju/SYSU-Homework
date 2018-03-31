@@ -340,7 +340,82 @@
 - 我这么懒的人，为什么要实现单例模式呢，因为我在完成作业中遇到了一个 BUG ![](https://github.com/Chris-Ju/Picture/blob/master/NavigatedBug.png?raw=true)
 - 在 MainPage 进行挂起并关闭时并没有发生该错误，然而在 NewPage 中就发生了 Bug， 于是我求助了 Bob Kong， 他说这是由于我传了一个 ViewModel，但是 ViewModel 不是序列化的，所以会发生报错，这我就懵逼了...什么叫序列化? [C#的序列化与反序列化](http://www.cnblogs.com/qqflying/archive/2008/01/13/1037262.html)
 - 我看完之后立刻失去了兴趣，还是去改单例吧。
+- 作业代码
 
+    - 写在 OnSuspending 函数中
+    
+        ```cs
+        issuspend = true; // App类中的静态变量，为了判断是否挂起
+        Frame frame = Window.Current.Content as Frame;
+        ApplicationData.Current.LocalSettings.Values["NavigationState"] = frame.GetNavigationState(); // 将所处在的状态保存进入LocalSetting
+        // ApplicationData.Current.LocalSettings : The application settings container. The name of each setting can be 255 characters in length at most. Each setting can be up to 8K bytes in size and each composite setting can be up to 64K bytes in size.
+        ```
+
+    - 写在 OnLaunch 函数中的
+        ```cs
+        if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
+        {
+            //TODO: 从之前挂起的应用程序加载状态
+            if (ApplicationData.Current.LocalSettings.Values.ContainsKey("NavigationState"))
+            {
+                rootFrame.SetNavigationState((string)ApplicationData.Current.LocalSettings.Values["NavigationState"]);
+
+            }
+        }
+        ```
+
+    - 写在 OnRemusing 函数中的
+        ```cs 
+        private void OnResuming(object sender, object e)
+        {
+            issuspend = false;
+
+        }
+        ```
+    - 在 Main.xaml.cs 中
+        ```cs
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            bool susppending = ((App)App.Current).issuspend;
+            if (susppending)
+            {
+                ApplicationDataCompositeValue composite = new ApplicationDataCompositeValue();
+                composite["title"] = Title.Text;
+                composite["detail"] = Detail.Text;
+                BitmapImage myBitmapImage = Icon.Source as BitmapImage;
+                //composite["imgae"] = myBitmapImage.UriSource.ToString();
+                composite["date"] = Date.Date;
+                composite["test1"] = View_Model.AllItems[0].completed;
+                composite["test2"] = View_Model.AllItems[1].completed;
+                ApplicationData.Current.LocalSettings.Values["NewPage"] = composite;
+            }
+        }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            this.View_Model = ViewModels.TodoViewModels.GetInstance();
+            if (e.NavigationMode == NavigationMode.New)
+            {
+                ApplicationData.Current.LocalSettings.Values.Remove("NewPage");
+            }
+            else
+            {
+                if (ApplicationData.Current.LocalSettings.Values.ContainsKey("NewPage"))
+                {
+                    var composite = ApplicationData.Current.LocalSettings.Values["NewPage"] as ApplicationDataCompositeValue;
+                    Title.Text = (string)composite["title"];
+                    Detail.Text = (string)composite["detail"];
+                    Date.Date = (DateTimeOffset)composite["date"];
+                    View_Model.AllItems[0].completed = (bool)composite["test1"];
+                    View_Model.AllItems[1].completed = (bool)composite["test2"];
+                    //Icon.Source = new BitmapImage(new Uri((string)composite["image"]));
+                    ApplicationData.Current.LocalSettings.Values.Remove("NewPage");
+                }
+            }
+        }
+        ```
+
+- 由于挂起并关闭机制会清空 View_Model，所以我想讲 View_Model 传入 ApplicationData.Current.LocalSettings，然而该容器只接受已经序列化的数据，如上，我放弃了。同样的，我想将 ImageSource 序列化，同样以失败告终。由于 View_Model 不可以传递，所以我建了两个固定的 Item。
+- 还有个问题是 对于 x:bind 与 binding 的区别，会造成绑定 Completed 是出现问题，以后再做研究。
 
 ## 后序
 - 该说的我觉得都已经说啦，基本上一些常见的问题都已经论述，同时也将原理阐述明白了。第一次不是因为任务而写博客，还有一种成就感，哈哈哈，以后应该会坚持下去的吧。

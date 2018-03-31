@@ -38,6 +38,7 @@ namespace MyList
             ImageBrush imageBrush = new ImageBrush();
             imageBrush.ImageSource = new BitmapImage(new Uri("ms-appx:///Assets/timg.jpg", UriKind.Absolute));
             All.Background = imageBrush;
+
         }
 
         private void AddAppBarButton_Click(object sender, RoutedEventArgs e)
@@ -66,8 +67,9 @@ namespace MyList
                     Title.Text = (string)composite["title"];
                     Detail.Text = (string)composite["detail"];
                     Date.Date = (DateTimeOffset)composite["date"];
-                    ///Icon.Source = (ImageSource)composite["image"];
-                    ///View_Model = (ViewModels.TodoViewModels)composite["viewModel"];
+                    View_Model.AllItems[0].completed = (bool)composite["test1"];
+                    View_Model.AllItems[1].completed = (bool)composite["test2"];
+                    //Icon.Source = new BitmapImage(new Uri((string)composite["image"]));
                     ApplicationData.Current.LocalSettings.Values.Remove("NewPage");
                 }
             }
@@ -209,9 +211,11 @@ namespace MyList
                 ApplicationDataCompositeValue composite = new ApplicationDataCompositeValue();
                 composite["title"] = Title.Text;
                 composite["detail"] = Detail.Text;
-                ///composite["imgae"] = Icon.Source;
+                BitmapImage myBitmapImage = Icon.Source as BitmapImage;
+                //composite["imgae"] = myBitmapImage.UriSource.ToString();
                 composite["date"] = Date.Date;
-                ///composite["viewModel"] = View_Model;
+                composite["test1"] = View_Model.AllItems[0].completed;
+                composite["test2"] = View_Model.AllItems[1].completed;
                 ApplicationData.Current.LocalSettings.Values["NewPage"] = composite;
             }
         }

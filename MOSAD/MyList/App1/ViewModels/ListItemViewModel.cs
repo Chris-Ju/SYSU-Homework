@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace MyList.ViewModels
 {
@@ -18,6 +19,8 @@ namespace MyList.ViewModels
             if(Instance == null)
             {
                 Instance = new TodoViewModels();
+                Instance.AddTodoItem("Test1", "Test1", DateTime.Now, new BitmapImage(new Uri("ms-appx:///Assets/Background.jpg")));
+                Instance.AddTodoItem("Test2", "Test2", DateTime.Now, new BitmapImage(new Uri("ms-appx:///Assets/Background.jpg")));
             }
             return Instance;
         }
