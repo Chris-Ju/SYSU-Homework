@@ -49,7 +49,7 @@ public class IUserInterface : MonoBehaviour
         }
         else
         {
-           
+
             if (theGame.state == State.BoatSTART || theGame.state == State.BoatEND)
             {
                 if (GUI.Button(new Rect(castw(2f), casth(6f), width, height), "Go"))
