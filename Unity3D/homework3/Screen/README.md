@@ -92,6 +92,7 @@ public class move : MonoBehaviour {
 }
 ```
 
+- 转视角后控制人物移动发现人物可以飞起来，发现我没有设置重力。 Add Component -> Physics -> Rigidbody 设置物体为刚体，然后点击上面的 Use Gravity，运行后人物往下掉。是因为我没给 Terrain 设置刚体属性，同上一样，取消 Use Gravity，还是往下掉，去网上查阅了一下，因为没有设置碰撞属性，Add Component -> Physics -> Box Collier。
 - OK，结束，自我感觉很酷！[视频地址](https://github.com/Chris-Ju/SYSU-Homework/blob/master/Unity3D/homework3/Screen/Screen_v1.mp4)
 
 - 非常想吐槽的一点是，下载各种包后C盘莫名其妙少了很多空间...原因未知
