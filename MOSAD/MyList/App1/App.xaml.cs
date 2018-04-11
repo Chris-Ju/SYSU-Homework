@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Core;
 using Windows.Storage;
+using Windows.UI.Notifications;
 
 namespace MyList
 {
@@ -36,6 +37,7 @@ namespace MyList
             this.InitializeComponent();
             this.Suspending += OnSuspending;
             this.Resuming += OnResuming;
+  
         }
 
         /// <summary>
@@ -58,6 +60,7 @@ namespace MyList
                 rootFrame = new Frame();
                 rootFrame.NavigationFailed += OnNavigationFailed;
                 rootFrame.Navigated += OnNavigated;
+            
                 SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
@@ -67,6 +70,12 @@ namespace MyList
                         rootFrame.SetNavigationState((string)ApplicationData.Current.LocalSettings.Values["NavigationState"]);
 
                     }
+                }
+
+                if (e.PreviousExecutionState == ApplicationExecutionState.ClosedByUser)
+                {
+                    var updator = TileUpdateManager.CreateTileUpdaterForApplication();
+                    updator.Clear();
                 }
                 // 将框架放在当前窗口中
                 Window.Current.Content = rootFrame;

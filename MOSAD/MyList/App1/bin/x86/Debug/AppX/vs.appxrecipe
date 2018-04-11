@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>E:\现代操作系统应用开发\MyList\MyList\App1\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>AC4556769F2B236381E0688CD00EB6C284BBF270E3B730ADCC8E9A2D61403F1D</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>F4998CFEEAE2C4A49CC32E14BE9F803A577DB11811A4DBA1A3FE68624EE2F1DA</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>2eaa1af0-509d-4109-916c-8068608cfbe7_1.0.0.0_x86__5f8hck6s7ve16</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>2eaa1af0-509d-4109-916c-8068608cfbe7_5f8hck6s7ve16!App</RegisteredUserModeAppID>
     <RegisteredPackageID>2eaa1af0-509d-4109-916c-8068608cfbe7</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="E:\现代操作系统应用开发\MyList\MyList\App1\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-31T15:53:20.912</Modified>
+      <Modified>2018-04-11T15:19:38.884</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\bin\x86\Debug\MyList.exe">
       <PackagePath>entrypoint\MyList.exe</PackagePath>
-      <Modified>2018-03-31T15:53:20.282</Modified>
+      <Modified>2018-04-11T15:19:37.830</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\NuGetPackages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -499,13 +499,238 @@
       <PackagePath>Assets\Background.jpg</PackagePath>
       <Modified>2018-03-28T07:59:07.610</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\BadgeLogo.scale-100.jpg">
+      <PackagePath>Assets\BadgeLogo.scale-100.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-23T07:50:27.323</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\BadgeLogo.scale-125.jpg">
+      <PackagePath>Assets\BadgeLogo.scale-125.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-23T07:50:27.323</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\BadgeLogo.scale-150.jpg">
+      <PackagePath>Assets\BadgeLogo.scale-150.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-23T07:50:27.323</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\BadgeLogo.scale-200.jpg">
+      <PackagePath>Assets\BadgeLogo.scale-200.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-23T07:50:27.323</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\BadgeLogo.scale-400.jpg">
+      <PackagePath>Assets\BadgeLogo.scale-400.jpg</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-05-23T07:50:27.323</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\timg.jpg">
       <PackagePath>Assets\timg.jpg</PackagePath>
       <Modified>2018-03-28T08:01:10.022</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2018-03-30T04:15:30.713</Modified>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\LargeTile.scale-100.png">
+      <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\LargeTile.scale-125.png">
+      <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\LargeTile.scale-150.png">
+      <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\LargeTile.scale-200.png">
+      <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\LargeTile.scale-400.png">
+      <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\MyList.png">
+      <PackagePath>Assets\MyList.png</PackagePath>
+      <Modified>2018-04-10T14:06:57.042</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\SmallTile.scale-100.png">
+      <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\SmallTile.scale-125.png">
+      <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\SmallTile.scale-150.png">
+      <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\SmallTile.scale-200.png">
+      <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\SmallTile.scale-400.png">
+      <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\SplashScreen.scale-125.png">
+      <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\SplashScreen.scale-150.png">
+      <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\SplashScreen.scale-400.png">
+      <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Square150x150Logo.scale-125.png">
+      <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Square150x150Logo.scale-150.png">
+      <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Square150x150Logo.scale-400.png">
+      <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Square44x44Logo.scale-100.png">
+      <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Square44x44Logo.scale-125.png">
+      <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Square44x44Logo.scale-150.png">
+      <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Square44x44Logo.scale-400.png">
+      <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Square44x44Logo.targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Square44x44Logo.targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Square44x44Logo.targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Square44x44Logo.targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Square44x44Logo.targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\StoreLogo.scale-200.png">
+      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\StoreLogo.scale-400.png">
+      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-10T12:20:57.240</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -514,36 +739,39 @@
     <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-16T05:59:28.723</Modified>
+      <Modified>2018-04-10T12:20:57.240</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-16T05:59:28.723</Modified>
+      <Modified>2018-04-10T12:20:57.240</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-16T05:59:28.723</Modified>
+      <Modified>2018-04-10T12:20:57.240</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-16T05:59:28.723</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-16T05:59:28.723</Modified>
+      <Modified>2018-04-10T12:20:57.240</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-16T05:59:28.723</Modified>
+      <Modified>2018-04-10T12:20:57.240</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2018-03-30T04:15:30.713</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\Tile.xml">
+      <PackagePath>Tile.xml</PackagePath>
+      <Modified>2018-04-10T15:21:39.133</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\bin\x86\Debug\MyList.xr.xml">
       <PackagePath>MyList.xr.xml</PackagePath>
-      <Modified>2018-03-31T15:53:20.111</Modified>
+      <Modified>2018-04-11T08:50:01.876</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -552,11 +780,11 @@
     <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-03-31T15:53:20.709</Modified>
+      <Modified>2018-04-11T14:43:55.906</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\现代操作系统应用开发\MyList\MyList\App1\bin\x86\Debug\Core\MyList.exe">
       <PackagePath>MyList.exe</PackagePath>
-      <Modified>2018-03-31T15:53:20.909</Modified>
+      <Modified>2018-04-11T15:19:38.882</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

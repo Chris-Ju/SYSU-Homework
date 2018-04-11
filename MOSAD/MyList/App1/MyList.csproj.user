@@ -4,4 +4,14 @@
     <DeviceId>30F105C9-681E-420b-A277-7C086EAD8A4E</DeviceId>
     <UseEmulator>true</UseEmulator>
   </PropertyGroup>
+  <PropertyGroup>
+    <Source>C:\Users\lenovo\Downloads\MyList.jpg</Source>
+    <SmallTileSource>C:\Users\lenovo\Downloads\MyList.jpg</SmallTileSource>
+    <MediumTileSource>C:\Users\lenovo\Downloads\MyList.jpg</MediumTileSource>
+    <WideTileSource>C:\Users\lenovo\Downloads\MyList.jpg</WideTileSource>
+    <LargeTileSource>C:\Users\lenovo\Downloads\MyList.jpg</LargeTileSource>
+    <AppIconSource>C:\Users\lenovo\Downloads\MyList.jpg</AppIconSource>
+    <SplashScreenSource>C:\Users\lenovo\Downloads\MyList.jpg</SplashScreenSource>
+    <PackageLogoSource>C:\Users\lenovo\Downloads\MyList.jpg</PackageLogoSource>
+  </PropertyGroup>
 </Project>

@@ -31,6 +31,8 @@ namespace MyList
     public sealed partial class NewPage : Page
     {
 
+        StorageFile file;
+
         public NewPage()
         {
             this.InitializeComponent();
@@ -57,6 +59,7 @@ namespace MyList
                     Title.Text = ViewModel.SelectedItem.title;
                     Detail.Text = ViewModel.SelectedItem.description;
                     Date.Date = ViewModel.SelectedItem.date;
+                    Icon.Source = ViewModel.SelectedItem.source;
                 }
             }
             else
@@ -119,7 +122,7 @@ namespace MyList
                 else
                 {
                     var messageDialog = new MessageDialog("Create successfully!");
-                    ViewModel.AddTodoItem(Title.Text, Detail.Text, new DateTime(Date.Date.Year, Date.Date.Month, Date.Date.Day), this.Icon.Source);                    
+                    ViewModel.AddTodoItem(Title.Text, Detail.Text, new DateTime(Date.Date.Year, Date.Date.Month, Date.Date.Day), this.Icon.Source, file);                    
                     await messageDialog.ShowAsync();
                     Frame rootFrame = Window.Current.Content as Frame;
                     rootFrame.GoBack();
@@ -153,7 +156,7 @@ namespace MyList
                 }
                 else
                 {
-                    ViewModel.UpdateTodoItem(ViewModel.SelectedItem.id, Title.Text, Detail.Text, new DateTime(Date.Date.Year, Date.Date.Month, Date.Date.Day), this.Icon.Source);
+                    ViewModel.UpdateTodoItem(ViewModel.SelectedItem.GetId(), Title.Text, Detail.Text, new DateTime(Date.Date.Year, Date.Date.Month, Date.Date.Day), this.Icon.Source, file);
                     var messageDialog = new MessageDialog("Update successfully!");
                     await messageDialog.ShowAsync();
                     Frame rootFrame = Window.Current.Content as Frame;
@@ -177,22 +180,27 @@ namespace MyList
             openPicker.FileTypeFilter.Add(".jpeg");
             openPicker.FileTypeFilter.Add(".png");
 
-            StorageFile file = await openPicker.PickSingleFileAsync();
-            BitmapImage srcImage = new BitmapImage();
+            file = await openPicker.PickSingleFileAsync();
+
 
             if (file != null)
             {
-                using (IRandomAccessStream stream = await file.OpenAsync(FileAccessMode.Read))
-                {
-                    await srcImage.SetSourceAsync(stream);
-                    this.Icon.Source = srcImage;
-                }
+                //using (IRandomAccessStream stream = await file.OpenAsync(FileAccessMode.Read))
+                //{
+                //    await srcImage.SetSourceAsync(stream);
+                //    this.Icon.Source = srcImage;
+                // }
+                IRandomAccessStream stream = await file.OpenAsync(FileAccessMode.Read);
+                // var i = new MessageDialog(file.Name).ShowAsync();
+                BitmapImage bitmapImage = new BitmapImage();
+                await bitmapImage.SetSourceAsync(stream);
+                Icon.Source = bitmapImage;
             }
 
         }
         private async void DeleteAppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            ViewModel.RemoveTodoItem(ViewModel.SelectedItem.id);
+            ViewModel.RemoveTodoItem(ViewModel.SelectedItem.GetId());
             var messageDialog = new MessageDialog("Delete successfully!");
             await messageDialog.ShowAsync();
             Frame rootFrame = Window.Current.Content as Frame;

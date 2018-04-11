@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
+using Windows.Storage;
 
 namespace MyList.ViewModels
 {
@@ -19,8 +20,6 @@ namespace MyList.ViewModels
             if(Instance == null)
             {
                 Instance = new TodoViewModels();
-                Instance.AddTodoItem("Test1", "Test1", DateTime.Now, new BitmapImage(new Uri("ms-appx:///Assets/Background.jpg")));
-                Instance.AddTodoItem("Test2", "Test2", DateTime.Now, new BitmapImage(new Uri("ms-appx:///Assets/Background.jpg")));
             }
             return Instance;
         }
@@ -32,16 +31,16 @@ namespace MyList.ViewModels
 
         public Models.TodoItem SelectedItem { get { return selectedItem; } set { this.selectedItem = value; } }
 
-        public void AddTodoItem(String title, String description, DateTime date, ImageSource source)
+        public void AddTodoItem(String title, String description, DateTime date, ImageSource source, StorageFile f)
         {
-            this.allItems.Add(new Models.TodoItem(title, description, date, source));
+            this.allItems.Add(new Models.TodoItem(title, description, date, source, f));
         }
 
         public void RemoveTodoItem(String id)
         {
             foreach (var item in this.allItems)
             {
-                if (item.id == id)
+                if (item.GetId() == id)
                 {
                     this.allItems.Remove(item);
                     break;
@@ -50,16 +49,17 @@ namespace MyList.ViewModels
             this.selectedItem = null;
         }
 
-        public void UpdateTodoItem(String id, String title, String description, DateTime date, ImageSource source)
+        public void UpdateTodoItem(String id, String title, String description, DateTime date, ImageSource source, StorageFile f)
         {
             foreach (var item in this.allItems)
             {
-                if (item.id == id)
+                if (item.GetId() == id)
                 {
                     item.title = title;
                     item.description = description;
                     item.date = date;
                     item.source = source;
+                    item.f = f;
                     break;
                 }
             }
