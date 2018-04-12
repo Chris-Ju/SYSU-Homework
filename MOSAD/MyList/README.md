@@ -419,3 +419,108 @@
 - 还有个问题是 对于 x:bind 与 binding 的区别，会造成绑定 Completed 是出现问题，以后再做研究。
 
 ## 第五周
+
+- 作业要求
+    - ### Part 1 Live Tile
+        - 要求使用标准的处理XML DOM方式创建动态磁贴
+        - 要求采用Adaptive Tile （覆盖至少small、medium、wide）
+        - 实现效果：要求每添加一条项目，磁贴能进行更新，并且更新的内容循环展示（1-2-3-4-5-1-2-3-4……）
+    - ### Part 2 App to App Communication
+        - 在MenuFlyoutItem中增加Share选项，点击后相应条目能进行共享
+- Part 1
+- C# 封装了修改的磁贴的函数，所以其实只需完成 Titl.xml 便可以实现！
+    ```xml
+    <?xml version="1.0" encoding="utf-8" ?>
+    <tile>
+    <visual>
+        <binding template="TileSmall">
+        <text hint-style="subtitle" hint-align="center">Small</text>
+        <text hint-align="center">Text Field</text>
+        <image src ="Assets/MyList.png" placement ="background"></image>
+        </binding>
+
+        <binding template="TileMedium">
+        <text hint-style="subtitle" hint-align="center">Middle</text>
+        <text hint-align="center">Text Field</text>
+        <image src ="Assets/MyList.png" placement ="background"></image>
+        </binding>
+
+        <binding template="TileWide">
+        <text hint-style="subtitle" hint-align="center">Wide</text>
+        <text hint-align="center">Text Field</text>
+        <image src ="Assets/MyList.png" placement ="background"></image>
+        </binding>
+
+        <binding template="TileLarge">
+        <text hint-style="subtitle" hint-align="center">Large</text>
+        <text hint-align="center">Text Field</text>
+        <image src ="Assets/MyList.png" placement ="background"></image>
+        </binding>
+    </visual>
+    </tile>
+    ```
+    ```cs
+    XmlDocument tile = new XmlDocument();
+    tile.LoadXml(File.ReadAllText("Tile.xml"));
+    XmlNodeList tileText = tile.GetElementsByTagName("text");
+    for (int i = 0; i < tileText.Count; i++)
+    {
+        ((XmlElement)tileText[i]).InnerText = View_Model.AllItems[View_Model.AllItems.Count - 1].title;
+        i++;
+        ((XmlElement)tileText[i]).InnerText = View_Model.AllItems[View_Model.AllItems.Count - 1].description;
+
+    }
+    TileNotification notification = new TileNotification(tile);
+    var updator = TileUpdateManager.CreateTileUpdaterForApplication();
+    updator.Update(notification);
+    TileUpdateManager.CreateTileUpdaterForApplication().EnableNotificationQueue(true);
+    ```
+    ![](https://github.com/Chris-Ju/Picture/blob/master/TileUpdateManager.jpg?raw=true)
+
+- 这样存在的问题是，你关闭后，由于还没有设置本地数据库保存，数据清空，但是磁贴并不清空，于是我在 App.xaml.cs 的 OnLaunch 里加了这么一段，完美
+    ```cs
+    if (e.PreviousExecutionState == ApplicationExecutionState.ClosedByUser)
+    {
+        var updator = TileUpdateManager.CreateTileUpdaterForApplication();
+        updator.Clear();
+    }
+    ```
+
+- 并没有找到可以选择删除的方法，于是我更新后选择 Clear 然后逐条添加。
+
+- Part 2
+- 毕竟是微软的系统，毕竟 C# 也是微软的语言，封装的各种调用还是很棒的，共享只需要写一个函数。
+    ```cs
+    DataTransferManager.ShowShareUI();
+    ```
+
+- App 在收到请求时， 会调用 **DataTransferManager.GetForCurrentView().DataRequested**，我们需要把自己写的函数添加到此调用中
+- 如果 request.Data.Properties 没有设置 Title 与 Text 的话， 会导致 无法显示共享页面，原因以后研究后再来完善。
+- 由于对于图片传递的是 file, 所以将选择的图片扔到 Model 类中保存， 以便图片共享。
+    ```cs
+    private async void OnShareDataRequested(DataTransferManager sender, DataRequestedEventArgs args)
+    {
+        DataRequest request = args.Request;
+        DataRequestDeferral getFile = args.Request.GetDeferral();
+        request.Data.Properties.Title = View_Model.SelectedItem.title;
+        request.Data.SetText(View_Model.SelectedItem.description);
+        try
+        {
+            if (View_Model.SelectedItem.f != null)
+            {
+                request.Data.Properties.Thumbnail = RandomAccessStreamReference.CreateFromFile(View_Model.SelectedItem.f);
+                request.Data.SetBitmap(RandomAccessStreamReference.CreateFromFile(View_Model.SelectedItem.f));
+            }
+            else
+            {
+                StorageFile imageFile = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///Assets/Background.jpg"));
+                request.Data.SetBitmap(RandomAccessStreamReference.CreateFromFile(imageFile));
+            }
+        }
+        finally
+        {
+            getFile.Complete();
+        }
+        getFile.Complete();
+    }
+    ```
