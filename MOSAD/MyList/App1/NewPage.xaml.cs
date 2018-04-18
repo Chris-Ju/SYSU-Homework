@@ -1,9 +1,12 @@
-﻿using System;
+﻿using SQLitePCL;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using MyList;
+using MyList.ViewModels;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
@@ -32,7 +35,7 @@ namespace MyList
     {
 
         StorageFile file;
-
+        private string filePath = "ms-appx:///Assets/Background.jpg";
         public NewPage()
         {
             this.InitializeComponent();
@@ -40,15 +43,14 @@ namespace MyList
             imageBrush.ImageSource = new BitmapImage(new Uri("ms-appx:///Assets/timg.jpg", UriKind.Absolute));
             All.Background = imageBrush;
         }
-        private ViewModels.TodoViewModels ViewModel;
+        private TodoViewModels ViewModel;
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            this.ViewModel = ViewModels.TodoViewModels.GetInstance();
-            
+            ViewModel = TodoViewModels.GetInstance(Icon);
             if (e.NavigationMode == NavigationMode.New)
             {
                 ApplicationData.Current.LocalSettings.Values.Remove("NewPage");
-                if (ViewModel.SelectedItem == null)
+                if (ViewModel.SelectItem == null)
                 {
                     return;
                 }
@@ -56,10 +58,11 @@ namespace MyList
                 {
                     CreateBar.Content = "Update";
                     DeleteAppBarButton.Visibility = Visibility.Visible;
-                    Title.Text = ViewModel.SelectedItem.title;
-                    Detail.Text = ViewModel.SelectedItem.description;
-                    Date.Date = ViewModel.SelectedItem.date;
-                    Icon.Source = ViewModel.SelectedItem.source;
+                    Title.Text = ViewModel.SelectItem.title;
+                    Detail.Text = ViewModel.SelectItem.description;
+                    Date.Date = ViewModel.SelectItem.date;
+                    Icon.Source = ViewModel.SelectItem.source;
+                    this.filePath = ViewModel.SelectItem.picPath;
                 }
             }
             else
@@ -121,9 +124,16 @@ namespace MyList
                 }
                 else
                 {
-                    var messageDialog = new MessageDialog("Create successfully!");
-                    ViewModel.AddTodoItem(Title.Text, Detail.Text, new DateTime(Date.Date.Year, Date.Date.Month, Date.Date.Day), this.Icon.Source, file);                    
-                    await messageDialog.ShowAsync();
+                    ViewModel.AddTodoItem(Title.Text, Detail.Text, new DateTime(Date.Date.Year, Date.Date.Month, Date.Date.Day), this.Icon.Source, filePath, false);
+                    using (var cust_stmt = App.conn.Prepare("insert into Customer (Title, Details, Date, ImageUrl, IsCompleted) values (?, ?, ?, ?, ?)"))
+                    {
+                        cust_stmt.Bind(1, Title.Text);
+                        cust_stmt.Bind(2, Detail.Text);
+                        cust_stmt.Bind(3, Date.Date.ToString());
+                        cust_stmt.Bind(4, filePath);
+                        cust_stmt.Bind(5, "False");
+                        cust_stmt.Step();
+                    }
                     Frame rootFrame = Window.Current.Content as Frame;
                     rootFrame.GoBack();
 
@@ -155,10 +165,17 @@ namespace MyList
                     await messageDialog.ShowAsync();
                 }
                 else
-                {
-                    ViewModel.UpdateTodoItem(ViewModel.SelectedItem.GetId(), Title.Text, Detail.Text, new DateTime(Date.Date.Year, Date.Date.Month, Date.Date.Day), this.Icon.Source, file);
-                    var messageDialog = new MessageDialog("Update successfully!");
-                    await messageDialog.ShowAsync();
+                {              
+                    using (var cust_stmt = App.conn.Prepare("UPDATE Customer SET Title = ?, Details = ?, Date = ?, ImageUrl = ? WHERE Id = ?"))
+                    {
+                        cust_stmt.Bind(1, Title.Text);
+                        cust_stmt.Bind(2, Detail.Text);
+                        cust_stmt.Bind(3, Date.Date.ToString());
+                        cust_stmt.Bind(4, filePath);
+                        cust_stmt.Bind(5, GetId());
+                        cust_stmt.Step();
+                    }
+                    ViewModel.UpdateTodoItem(ViewModel.SelectItem.id, Title.Text, Detail.Text, new DateTime(Date.Date.Year, Date.Date.Month, Date.Date.Day), this.Icon.Source, filePath);
                     Frame rootFrame = Window.Current.Content as Frame;
                     rootFrame.GoBack();
                 }
@@ -185,24 +202,26 @@ namespace MyList
 
             if (file != null)
             {
-                //using (IRandomAccessStream stream = await file.OpenAsync(FileAccessMode.Read))
-                //{
-                //    await srcImage.SetSourceAsync(stream);
-                //    this.Icon.Source = srcImage;
-                // }
                 IRandomAccessStream stream = await file.OpenAsync(FileAccessMode.Read);
-                // var i = new MessageDialog(file.Name).ShowAsync();
-                BitmapImage bitmapImage = new BitmapImage();
-                await bitmapImage.SetSourceAsync(stream);
-                Icon.Source = bitmapImage;
+                BitmapImage bmp = new BitmapImage();
+                bmp.SetSource(stream);
+                this.Icon.Source = bmp;
+                this.filePath = file.Path;
+
+                // store to LocalFolder
+                await ImageStorage.StorageImageFolder(stream, new Uri(file.Path));
             }
 
         }
-        private async void DeleteAppBarButton_Click(object sender, RoutedEventArgs e)
+        private void DeleteAppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            ViewModel.RemoveTodoItem(ViewModel.SelectedItem.GetId());
-            var messageDialog = new MessageDialog("Delete successfully!");
-            await messageDialog.ShowAsync();
+           
+            using (var statement = App.conn.Prepare("DELETE FROM Customer WHERE Id = ?"))
+            {
+                statement.Bind(1, GetId());
+                statement.Step();
+            }
+            ViewModel.RemoveTodoItem(ViewModel.SelectItem.id);
             Frame rootFrame = Window.Current.Content as Frame;
             rootFrame.GoBack();
         }
@@ -212,6 +231,35 @@ namespace MyList
             Title.Text = "";
             Detail.Text = "";
             Date.Date = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+        }
+
+        private int GetId()
+        {
+            string query = "%%";
+            int id = 0;
+            string vtitle = ViewModel.SelectItem.title;
+            string vdetails = ViewModel.SelectItem.description;
+            using (var statement = App.conn.Prepare("select * from Customer where Id like ? or Title like ? or Details like ? or Date like ?"))
+            {
+                statement.Bind(1, query);
+                statement.Bind(2, query);
+                statement.Bind(3, query);
+                statement.Bind(4, query);
+
+                while (statement.Step() != SQLiteResult.DONE)
+                {
+                    string did = statement[0].ToString();
+                    string dtitle = statement[1].ToString();
+                    string ddetails = statement[2].ToString();
+                    if (vtitle == dtitle &&
+                        vdetails == ddetails)
+                    {
+                        id = int.Parse(did);
+                        break;
+                    }
+                }
+            }
+            return id;
         }
     }
 }

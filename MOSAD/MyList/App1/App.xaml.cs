@@ -17,9 +17,12 @@ using Windows.UI.Xaml.Navigation;
 using Windows.UI.Core;
 using Windows.Storage;
 using Windows.UI.Notifications;
+using SQLitePCL;
 
 namespace MyList
 {
+
+   
     /// <summary>
     /// 提供特定于应用程序的行为，以补充默认的应用程序类。
     /// </summary>
@@ -29,6 +32,7 @@ namespace MyList
         /// 初始化单一实例应用程序对象。这是执行的创作代码的第一行，
         /// 已执行，逻辑上等同于 main() 或 WinMain()。
         /// </summary>
+        public static SQLiteConnection conn { get; internal set; }
 
         public bool issuspend = false;
         
@@ -37,7 +41,8 @@ namespace MyList
             this.InitializeComponent();
             this.Suspending += OnSuspending;
             this.Resuming += OnResuming;
-  
+            LoadDatabase();
+
         }
 
         /// <summary>
@@ -72,11 +77,7 @@ namespace MyList
                     }
                 }
 
-                if (e.PreviousExecutionState == ApplicationExecutionState.ClosedByUser)
-                {
-                    var updator = TileUpdateManager.CreateTileUpdaterForApplication();
-                    updator.Clear();
-                }
+               
                 // 将框架放在当前窗口中
                 Window.Current.Content = rootFrame;
             }
@@ -145,6 +146,22 @@ namespace MyList
         {
             issuspend = false;
 
+        }
+
+        private void LoadDatabase()
+        {
+            conn = new SQLiteConnection("demo.db");
+            string sql = @"create table if not exists Customer (
+                            Id integer primary key autoincrement not null,
+                            Title varchar(140),
+                            Details varchar(140),
+                            Date varchar(140),
+                            ImageUrl varchar(255),
+                            IsCompleted varchar(10) not null);";
+            using (var statement = conn.Prepare(sql))
+            {
+                statement.Step();
+            }
         }
 
     }

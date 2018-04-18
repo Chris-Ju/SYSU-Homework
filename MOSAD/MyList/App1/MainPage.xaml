@@ -54,15 +54,15 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="30" />
                                 <ColumnDefinition Width="32" />
-                                <ColumnDefinition Width="100" />
-                                <ColumnDefinition Width="240" />
+                                <ColumnDefinition Width="120" />
+                                <ColumnDefinition Width="220" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="30" />
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
-                            <CheckBox x:Name="checkBox" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Height="20" Width="20" IsChecked="{Binding completed, Mode=TwoWay}"/>
+                            <CheckBox x:Name="checkBox" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Height="20" Width="20" IsChecked="{Binding completed, Mode=TwoWay}" Click="checkBox_Click"/>
                             <Image x:Name="image" Grid.Row="1" Grid.Column="2" Source="{x:Bind source}" Height="90" Width="90" Margin="0 0 20 20" Visibility="{Binding Visibility, ElementName=Temp_1}"/>
                             <TextBlock x:Name="textBlock" Grid.Row="1" Grid.Column="3" Text="{x:Bind title}"  VerticalAlignment="Center" Foreground="Black" FontSize="36" TextAlignment="Center"/>
                             <Line x:Name="Line_1" Width="250" Grid.Row="1" Grid.Column="3" Stretch="Fill" Stroke="Black" StrokeThickness="2" X1="1" VerticalAlignment="Center"  Visibility="{Binding IsChecked, ElementName=checkBox}"/>
@@ -84,10 +84,12 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="10" />
+                    <RowDefinition Height="50" />
                     <RowDefinition Height="180" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
+                <Button x:Name="search" Grid.Row="0" Grid.Column="1" Content="Search" Margin="40,10,0,8" Click="search_Click"/>
+                <TextBox x:Name="searchText" Grid.Row="0" Grid.Column="1" Margin="130,10,10,8"/>
                 <AppBarButton Grid.Column="1" Grid.Row="1" Icon="Pictures" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="260,120,0,0" Width="25" Height="35" Click="AppBarButton_1_ClickAsync"/>
                 <Button Grid.Row="2" Grid.Column="1" x:Name="CreateBar" Content="Create" HorizontalAlignment="Left" Margin="0,400,0,0" VerticalAlignment="Top" Height="30" Width="80" Click="CreateBarClick"/>
                 <TextBox Grid.Row="2" Grid.Column="1" x:Name="Title" HorizontalAlignment="Left" Margin="0,30,0,0" Text="" VerticalAlignment="Top" Height="20" Width="320"/>

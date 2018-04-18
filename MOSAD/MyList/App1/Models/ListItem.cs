@@ -6,34 +6,30 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Media;
 
 namespace MyList.Models
 {
     class TodoItem
     {
-
-        private string id;
-        public bool completed { get; set; }
-        public string GetId() { return this.id; }
-        public string description { get; set; }
-        public ImageSource source { get; set; }
+        public string id;
         public string title { get; set; }
+        public string description { get; set; }
+        public bool completed { get; set; }
         public DateTime date { get; set; }
-        public StorageFile f;
-        public TodoItem(string title, string description, DateTime date, ImageSource source, StorageFile f)
+        public ImageSource source { get; set; }
+        public string picPath;
+        public TodoItem(string title, string description, DateTime d, ImageSource imgSource, string picPath, bool comp)
         {
-            this.id = Guid.NewGuid().ToString(); //生成id
+            this.id = Guid.NewGuid().ToString();
             this.title = title;
             this.description = description;
-            this.completed = false; //默认为未完成
-            this.date = date;
-            this.source = source;
-            this.f = f;
-        }
+            this.completed = false;
+            this.date = d;
+            this.source = imgSource;
+            this.picPath = picPath;
+            this.completed = comp;
 
-      
+        }
     }
 }
