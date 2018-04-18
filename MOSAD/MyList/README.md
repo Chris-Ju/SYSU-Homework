@@ -524,3 +524,206 @@
         getFile.Complete();
     }
     ```
+
+## 第六周
+
+- 这周是爆炸的一周，我还这么认真的写博客我都开始佩服我自己了。这周主要是把数据用数据库存起来，数据库的安装只需在扩展中找到 SQLite 就可以，很简单。
+- 这一次连接数据库可以说是在除了 wordpress 以及 sqli 后第一次在写项目中使用数据库了，说来也是惭愧。
+- 所有数据库的使用都可以在编程语言中使用 sql 语句来实现的，但是这就带来的 sqli 注入的问题，虽然 c# 提供了对于 SQLite 的接口，不需要使用 sql 语句，但是本次作业因为时间以及懒的原因，我还是使用 sql 实现的。
+- 借 ppt 中的一句话， c# 使用 SQLite 只需要一个四部曲:
+    - 创建 SQLiteConnection
+    - 利用 SQLiteConnection.prepare()执行SQL语句
+    - 对参数以"映射"形式赋值
+    - 解析查询结果
+
+- 由于在一开始便加载数据库读入 Model 数据，并且数据库也是一个全局变量，所以应该将数据库创建写在 App.xaml.cs 文件中，并于程序一打开便加载。 Sql 语句就不一一解释了，数据库课程中应该有学。
+
+    ```cs
+    private void LoadDatabase()
+        {
+            conn = new SQLiteConnection("demo.db");
+            string sql = @"create table if not exists Customer (
+                            Id integer primary key autoincrement not null,
+                            Title varchar(140),
+                            Details varchar(140),
+                            Date varchar(140),
+                            ImageUrl varchar(255),
+                            IsCompleted varchar(10) not null);";
+            using (var statement = conn.Prepare(sql))
+            {
+                statement.Step();
+            }
+        }
+    ```
+
+- 数据库创建好了，只需要进行增删改查操作了。
+    - 增加
+
+    ```cs
+    using (var cust_stmt = App.conn.Prepare("INSERT INTO Customer (Title, Details, Date, ImageUrl, IsCompleted) VALUES (?, ?, ?, ?, ?)"))
+    {
+        cust_stmt.Bind(1, Title.Text);
+        cust_stmt.Bind(2, Detail.Text);
+        cust_stmt.Bind(3, Date.Date.ToString());
+        cust_stmt.Bind(4, filePath);
+        cust_stmt.Bind(5, "False");
+        cust_stmt.Step();
+    }
+    ```
+
+    - 删除
+
+    ```cs
+    using (var statement = App.conn.Prepare("DELETE FROM Customer WHERE Id = ?"))
+    {
+        statement.Bind(1, GetId());
+        statement.Step();
+    }
+    ```
+
+    - 修改
+
+    ```cs
+    using (var cust_stmt = App.conn.Prepare("UPDATE Customer SET Title = ?, Details = ?, Date = ?, ImageUrl = ? WHERE Id = ?"))
+    {
+        cust_stmt.Bind(1, Title.Text);
+        cust_stmt.Bind(2, Detail.Text);
+        cust_stmt.Bind(3, Date.Date.ToString());
+        cust_stmt.Bind(4, filePath);
+        cust_stmt.Bind(5, GetId());
+        cust_stmt.Step();
+    }
+    ```
+
+    - 查询
+
+    ```cs
+    string q = "%" + searchText.Text + "%";
+    using (var statement = App.conn.Prepare("SELECT * FROM Customer WHERE Title LIKE ? or Details LIKE ? or Date LIKE ?"))
+    {
+        statement.Bind(1, q);
+        statement.Bind(2, q);
+        statement.Bind(3, q);
+        string os = "";
+        while (statement.Step() != SQLiteResult.DONE)
+        {
+            string tid = statement[0].ToString();
+            string ttitle = statement[1].ToString();
+            string tdetails = statement[2].ToString();
+            string tdate = statement[3].ToString();
+            // string dpicpath = statement[4].ToString();
+            os += "Title: " + ttitle + "; Details: " + tdetails + "; Date: " + tdate + "\n";
+        }
+        var i = new MessageDialog(os).ShowAsync();
+    }
+    ```
+
+- 在这里，我解释一下 GetId() 函数 // 别问我为什么写出这么差劲的代码...我懒啊，这个是直接复制粘贴的...优化后的也在下面你们自己选择
+
+    ```cs
+    private int GetId()
+    {
+        string query = "%%";
+        int id = 0;
+        string vtitle = View_Model.SelectItem.title;
+        string vdetails = View_Model.SelectItem.description;
+        using (var statement = App.conn.Prepare("SELECT * FROM Customer WHERE Id LIKE ? OR Title LIKE ? OR Details LIKE ? OR Date LIKE ?"))
+        {
+            statement.Bind(1, query);
+            statement.Bind(2, query);
+            statement.Bind(3, query);
+            statement.Bind(4, query);
+
+            while (statement.Step() != SQLiteResult.DONE)
+            {
+                string did = statement[0].ToString();
+                string dtitle = statement[1].ToString();
+                string ddetails = statement[2].ToString();
+                if (vtitle == dtitle && vdetails == ddetails)
+                {
+                    id = int.Parse(did);
+                    break;
+                }
+            }
+        }
+        return id;
+    }
+    ```
+
+    ```sql
+    SELECT * FROM Customer WHERE Title = ? and Details = ?
+    ```
+- 增删改查完成后，还有一部分没有解决，便是 *是否完成* 的问题，因为 SeletedItem 在没有点击时为 null，所以我想了很多办法，只能每次点击后依次遍历了。
+    
+    ```cs
+    private void checkBox_Click(object sender, RoutedEventArgs e)
+    {
+        for (int count = 0; count < View_Model.AllItems.Count; count++)
+        {
+            View_Model.SelectItem = View_Model.AllItems[count];
+            Debug.WriteLine(View_Model.SelectItem.completed.ToString());
+            using (var statement = App.conn.Prepare("UPDATE Customer SET IsCompleted = ? WHERE Id = ?"))
+            {
+                statement.Bind(1, View_Model.SelectItem.completed.ToString());
+                statement.Bind(2, GetId());
+                statement.Step();
+            }
+        }
+        View_Model.SelectItem = null;
+    }
+    ```
+    
+- 到这里，所有的问题都已经解决了，其实这周作业还是蛮简单的，如果你不想去实现 Image 的储存的话...
+- 下面，重点来了，如何存储 Image 呢?
+
+- 或许你已经发现了，我在 github 中 Main.xmal.cs 与 NewPage.xmal.cs 中有一个 ImageStorage.StorageImageFolder 的函数， 在 ViewModels 里面有一个函数 ImageStorage.GetLoacalFolderImage，这便是图片储存的实现。
+
+- 来看 ImageStorage 中的函数
+    - GetLoacalFolderImage 实现了图片文件的读取，将已经二进制化的文件转化为 stream 并写入 BitmapImage 中
+
+    ```cs
+    public static async Task GetLoacalFolderImage(Uri uri, BitmapImage timg)
+    {
+        StorageFolder folder = await GetImageFolder();
+        string name = Md5(uri.AbsolutePath);
+        try
+        {
+            StorageFile file = await folder.GetFileAsync(name);
+            using (var stream = await file.OpenAsync(FileAccessMode.Read))
+            {
+                await timg.SetSourceAsync(stream);
+            }
+        }
+        catch (Exception)
+        {
+        }
+    }
+    ```
+
+    - StorageImageFolder 实现了图片文件的二进制保存
+
+    ```cs
+    public static async Task StorageImageFolder(IRandomAccessStream stream, Uri uri)
+    {
+        StorageFolder folder = await GetImageFolder();
+        string image = Md5(uri.AbsolutePath);
+        try
+        {
+            StorageFile file = await folder.CreateFileAsync(image);
+            await FileIO.WriteBytesAsync(file, await ConvertIRandomAccessStreamByte(stream));
+        }
+        catch (Exception)
+        {
+        }
+    }
+    ```
+
+    - ConvertIRandomAccessStreamByte 是具体实现二进制
+    - GetImageFolder 在本地创建或者读取存储图片的文件
+    - Md5 文件 Url 的加密
+- ps. 文件共享 图片的共享在第六周修改后有 bug，该 bug 只需将 Uri 转化为 stream 便好，懒得改了。
+
+
+- 对于 StringBuilder ?不知道为什么突然问这个。 StringBuilder类型在最终生成String对象之前，将不会产生任何String对象，这很好地解决了字符串操作的性能问题 [参考地址](http://blog.51cto.com/genwoxuedotnet/503333)
+
+- LocalFolder RoamingFolder 我认为是 App 与本地的一个连接，由于 App 权限问题，所以需要一个位置来储存数据， LocalFolder 与 RoamingFolder 本地储存地址便解决了这个问题
