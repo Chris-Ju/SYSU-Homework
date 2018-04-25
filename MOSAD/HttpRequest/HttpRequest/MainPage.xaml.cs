@@ -44,7 +44,7 @@ namespace HttpRequest
             try
             {
 
-                string url = "http://api.k780.com/?app=ip.get&ip=" + ip + "&appkey=33116&sign=31c6db9390065b2f0def78e073e4aebc&format=xml";
+                string url = "http://api.k780.com/?app=ip.get&ip=" + ip + key;
                 HttpClient client = new HttpClient();
                 string result = await client.GetStringAsync(url);
                 XmlDocument document = new XmlDocument();
@@ -80,7 +80,7 @@ namespace HttpRequest
 
         async void queryAsyncWeather(string city)
         {
-            string url = "https://api.seniverse.com/v3/weather/now.json?key=cxatyah5f3gf9mhm&location=" + city;
+            string url = "https://api.seniverse.com/v3/weather/now.json?key=" + "location=" + city;
             HttpClient client = new HttpClient();
             try
             {
