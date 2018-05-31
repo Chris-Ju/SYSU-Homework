@@ -1,0 +1,521 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Wed May 30 23:45:23 2018
+# Process ID: 6708
+# Log file: E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.runs/synth_1/SingleStyleCPU.vds
+# Journal file: E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source SingleStyleCPU.tcl -notrace
+Command: synth_design -top SingleStyleCPU -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-1223] The version limit for your license is '2017.03' and will expire in -425 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SignZeroExtend.v:29]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 273.957 ; gain = 100.859
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'SingleStyleCPU' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:23]
+	Parameter T1MS bound to: 50000 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'ALU' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/ALU.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (1#1) [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/ALU.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'ALUop' does not match port width (3) of module 'ALU' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:54]
+INFO: [Synth 8-638] synthesizing module 'ALUSrcSelect' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/ALUSrcSelect.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ALUSrcSelect' (2#1) [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/ALUSrcSelect.v:23]
+INFO: [Synth 8-638] synthesizing module 'ControlUnit' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/ControlUnit.v:22]
+INFO: [Synth 8-256] done synthesizing module 'ControlUnit' (3#1) [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/ControlUnit.v:22]
+WARNING: [Synth 8-689] width (1) of port connection 'ALUOp' does not match port width (3) of module 'ControlUnit' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:56]
+INFO: [Synth 8-638] synthesizing module 'DataMemory' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/DataMemory.v:23]
+WARNING: [Synth 8-4767] Trying to implement RAM 'RAM_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+RAM "RAM_reg" dissolved into registers
+INFO: [Synth 8-256] done synthesizing module 'DataMemory' (4#1) [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/DataMemory.v:23]
+INFO: [Synth 8-638] synthesizing module 'DataSelect' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/DataSelect.v:23]
+INFO: [Synth 8-256] done synthesizing module 'DataSelect' (5#1) [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/DataSelect.v:23]
+INFO: [Synth 8-638] synthesizing module 'InsMemRW' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/InsMemRW.v:23]
+INFO: [Synth 8-256] done synthesizing module 'InsMemRW' (6#1) [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/InsMemRW.v:23]
+INFO: [Synth 8-638] synthesizing module 'InstructionMemory' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/InstructionMemory.v:23]
+INFO: [Synth 8-256] done synthesizing module 'InstructionMemory' (7#1) [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/InstructionMemory.v:23]
+INFO: [Synth 8-638] synthesizing module 'JumpOp' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/JumpOp.v:23]
+INFO: [Synth 8-256] done synthesizing module 'JumpOp' (8#1) [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/JumpOp.v:23]
+INFO: [Synth 8-638] synthesizing module 'PC' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/PC.v:22]
+INFO: [Synth 8-256] done synthesizing module 'PC' (9#1) [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/PC.v:22]
+INFO: [Synth 8-638] synthesizing module 'PC4' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/PC4.v:23]
+INFO: [Synth 8-256] done synthesizing module 'PC4' (10#1) [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/PC4.v:23]
+INFO: [Synth 8-638] synthesizing module 'PCI' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/PCI.v:23]
+INFO: [Synth 8-256] done synthesizing module 'PCI' (11#1) [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/PCI.v:23]
+INFO: [Synth 8-638] synthesizing module 'PCSelect' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/PCSelect.v:23]
+INFO: [Synth 8-256] done synthesizing module 'PCSelect' (12#1) [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/PCSelect.v:23]
+INFO: [Synth 8-638] synthesizing module 'RegisterFile' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/RegisterFile.v:23]
+INFO: [Synth 8-256] done synthesizing module 'RegisterFile' (13#1) [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/RegisterFile.v:23]
+INFO: [Synth 8-638] synthesizing module 'RegSelect' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/RegSelect.v:23]
+INFO: [Synth 8-256] done synthesizing module 'RegSelect' (14#1) [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/RegSelect.v:23]
+INFO: [Synth 8-638] synthesizing module 'SignZeroExtend' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SignZeroExtend.v:23]
+INFO: [Synth 8-256] done synthesizing module 'SignZeroExtend' (15#1) [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SignZeroExtend.v:23]
+INFO: [Synth 8-638] synthesizing module 'SegLED' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/new/SegLED.v:23]
+INFO: [Synth 8-226] default block is never used [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/new/SegLED.v:29]
+INFO: [Synth 8-256] done synthesizing module 'SegLED' (16#1) [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/new/SegLED.v:23]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:89]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:90]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:91]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:92]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:93]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:94]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:95]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:96]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:97]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:98]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:99]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:100]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:101]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:102]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:103]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:104]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:120]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:140]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:160]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:180]
+INFO: [Synth 8-256] done synthesizing module 'SingleStyleCPU' (17#1) [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/SingleStyleCPU.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 312.902 ; gain = 139.805
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 312.902 ; gain = 139.805
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/constrs_1/new/ports.xdc]
+WARNING: [Vivado 12-507] No nets matched 'CLK_IBUF'. [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/constrs_1/new/ports.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/constrs_1/new/ports.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/constrs_1/new/ports.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 609.039 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 609.039 ; gain = 435.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 609.039 ; gain = 435.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 609.039 ; gain = 435.941
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/ALU.v:30]
+INFO: [Synth 8-5545] ROM "zero" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5546] ROM "PCWre0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ALUSrcA0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "DBDataSrc0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mWR0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ExtSel0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "PCSrc0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "IDataIn" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "IDataIn" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "IDataIn" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "IDataIn" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "sel" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+WARNING: [Synth 8-327] inferring latch for variable 'address_reg' [E:/Computer Organization/Experiment/SingleCycleCpu/SingleCycleCpu_Basys3/SingleCycleCpu_Basys3.srcs/sources_1/imports/SingleCycleCpu.srcs/sources_1/new/PCSelect.v:32]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 609.039 ; gain = 435.941
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'seg5' (SegLED) to 'seg9'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 5     
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               20 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   8 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 6     
+	   4 Input     32 Bit        Muxes := 1     
+	   4 Input     11 Bit        Muxes := 5     
+	   2 Input     11 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 300   
+	  69 Input      8 Bit        Muxes := 4     
+	  16 Input      7 Bit        Muxes := 15    
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 302   
+	   5 Input      1 Bit        Muxes := 101   
+	   4 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module SingleStyleCPU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               20 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     11 Bit        Muxes := 5     
+	   2 Input     11 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	   8 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module ALUSrcSelect 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module ControlUnit 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 9     
+Module DataMemory 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 3     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 300   
+	   2 Input      1 Bit        Muxes := 300   
+	   5 Input      1 Bit        Muxes := 100   
+Module DataSelect 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module InsMemRW 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
++---Muxes : 
+	  69 Input      8 Bit        Muxes := 4     
+Module PC 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module PC4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module PCI 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module PCSelect 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module RegisterFile 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module RegSelect 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+Module SignZeroExtend 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module SegLED 
+Detailed RTL Component Info : 
++---Muxes : 
+	  16 Input      7 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 609.039 ; gain = 435.941
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "zero" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sel" won't be mapped to RAM because address size (20) is larger than maximum supported(18)
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 609.039 ; gain = 435.941
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 609.039 ; gain = 435.941
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: 
++---------------+-----------------------------+-----------+----------------------+---------------+-----------------------+
+|Module Name    | RTL Object                  | Inference | Size (Depth x Width) | Primitives    | Hierarchical Name     | 
++---------------+-----------------------------+-----------+----------------------+---------------+-----------------------+
+|SingleStyleCPU | my_registerfile/regFile_reg | Implied   | 32 x 32              | RAM32M x 12   | SingleStyleCPU/ram__2 | 
++---------------+-----------------------------+-----------+----------------------+---------------+-----------------------+
+
+Note: The table shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once. "Hierarchical Name" reflects the Distributed RAM name as it appears in the hierarchical module and only part of it is displayed.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[31] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[30] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[29] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[28] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[27] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[26] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[25] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[24] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[23] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[22] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[21] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[20] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[19] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[18] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[17] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[16] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[15] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[14] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[13] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[12] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[11] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[10] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[9] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[8] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[31] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[30] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[29] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[28] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[27] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[26] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[25] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[24] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[23] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[22] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[21] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[20] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[19] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[18] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[17] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[16] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[15] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[14] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[13] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[12] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[11] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[10] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[9] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[8] ) is unused and will be removed from module SingleStyleCPU.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 669.117 ; gain = 496.020
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 669.117 ; gain = 496.020
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 669.117 ; gain = 496.020
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 669.117 ; gain = 496.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 669.117 ; gain = 496.020
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (\my_pc/pc_new_reg[0] ) is unused and will be removed from module SingleStyleCPU.
+WARNING: [Synth 8-3332] Sequential element (\my_pcselect/address_reg[0] ) is unused and will be removed from module SingleStyleCPU.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 686.949 ; gain = 513.852
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 686.949 ; gain = 513.852
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 686.949 ; gain = 513.852
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 686.949 ; gain = 513.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 686.949 ; gain = 513.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 686.949 ; gain = 513.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    17|
+|3     |LUT1   |    31|
+|4     |LUT2   |    40|
+|5     |LUT3   |   827|
+|6     |LUT4   |   308|
+|7     |LUT5   |   189|
+|8     |LUT6   |  2046|
+|9     |MUXF7  |   173|
+|10    |MUXF8  |    17|
+|11    |RAM32M |    12|
+|12    |FDCE   |     7|
+|13    |FDRE   |   834|
+|14    |LD     |     7|
+|15    |IBUF   |     5|
+|16    |OBUF   |    11|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------+-------------+------+
+|      |Instance          |Module       |Cells |
++------+------------------+-------------+------+
+|1     |top               |             |  4526|
+|2     |  my_alu          |ALU          |   368|
+|3     |  my_datamemory   |DataMemory   |  2148|
+|4     |  my_pc           |PC           |   179|
+|5     |  my_pc4          |PC4          |     3|
+|6     |  my_pci          |PCI          |    26|
+|7     |  my_pcselect     |PCSelect     |    28|
+|8     |  my_registerfile |RegisterFile |  1664|
++------+------------------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 686.949 ; gain = 513.852
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 51 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 686.949 ; gain = 180.016
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 686.949 ; gain = 513.852
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 41 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 812 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 19 instances were transformed.
+  LD => LDCE: 7 instances
+  RAM32M => RAM32M (inverted pins: WCLK) (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 12 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+67 Infos, 72 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 686.949 ; gain = 477.348
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.095 . Memory (MB): peak = 686.949 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed May 30 23:46:07 2018...
