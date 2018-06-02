@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<toast launch="action=viewEvent&amp;eventId=1983" scenario="reminder">
+
+  <visual>
+    <binding template="ToastGeneric">
+      <text>How is it going today?</text>
+      <text>Date</text>
+      <text>Time</text>
+    </binding>
+  </visual>
+
+  <actions>
+    <input id="tag" type"text" defaultInput="15">
+
+    </input>
+    <input id="tag" type="selection" defaultInput="15">
+      
+    </input>
+    
+
+    <action
+      activationType="system"
+      arguments="Save"
+      hint-inputId="snoozeTime"
+      content=""/>
+
+    <action
+      activationType="system"
+      arguments="Open the app"
+      content=""/>
+
+  </actions>
+
+</toast>

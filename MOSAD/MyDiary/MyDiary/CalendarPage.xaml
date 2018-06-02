@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="MyDiary.CalendarPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyDiary"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource SystemControlChromeMediumAcrylicWindowMediumBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <CalendarView Grid.Row="1" SelectionMode="Single" IsGroupLabelVisible="True"
+                        IsOutOfScopeEnabled="True" Language="zh-CN"
+                        CalendarIdentifier="GregorianCalendar"
+                        HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                        Background="{ThemeResource SystemControlChromeMediumAcrylicElementMediumBrush}" SelectedDatesChanged="PressDate" />
+        <CommandBar Grid.Row="1" VerticalAlignment="Bottom"  Background="{ThemeResource SystemControlAccentAcrylicElementAccentMediumHighBrush}">
+            <AppBarButton x:Name="AddAppBarButton" Icon="Add" Label="Add"
+                          Style="{ThemeResource AppBarButtonRevealStyle}" Click="AddAppBarButton_Click"/>
+            <AppBarButton x:Name="DeleteAppBarButton" Icon="Delete" Label="Delete" Visibility="Collapsed"
+                          Style="{ThemeResource AppBarButtonRevealStyle}"/>
+        </CommandBar>
+    </Grid>
+</Page>

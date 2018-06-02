@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="MyDiary.NewPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource SystemControlAcrylicWindowMediumHighBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="200" />
+            <RowDefinition Height="110" />
+        </Grid.RowDefinitions>
+        <MediaElement x:Name="mediaPlayer" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" Height="50" VerticalAlignment="Center" Width="500"/>
+        <Slider x:Name="slider" Grid.Column="1" Grid.Row="2" ValueChanged="slider_ValueChanged" VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Visibility="Collapsed"/>
+        <CommandBar x:Name="mediaCommand" Grid.Row="2" Width="500" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 120, 0, 0" Visibility="Collapsed">
+            <AppBarButton x:Name="chose"  HorizontalAlignment="Left" Icon="SyncFolder" Label="选择文件"  VerticalAlignment="Top" Click="chose_Click" RenderTransformOrigin="0.5,0.433" />
+            <AppBarButton x:Name="pause"  HorizontalAlignment="Left" Icon="Pause" Label="暂停"  VerticalAlignment="Top" Click="pause_Click"  RenderTransformOrigin="-0.392,0.661"/>
+            <AppBarButton x:Name="play"  HorizontalAlignment="Left" Icon="Play" Label="播放"  VerticalAlignment="Top" Click="play_Click" />
+            <AppBarButton x:Name="stop"  HorizontalAlignment="Left" Icon="Stop" Label="停止" VerticalAlignment="Top" Click="stop_Click" />
+            <AppBarButton x:Name="VolumeAppBarButton" Icon="Volume" Label="Volume" Click="VolumeAppBarButton_Click" IsCompact="True">
+                <FlyoutBase.AttachedFlyout>
+                    <Flyout>
+                        <Slider Name="Volume" Visibility="Visible" Value="50" />
+                    </Flyout>
+                </FlyoutBase.AttachedFlyout>
+            </AppBarButton>
+        </CommandBar>
+        <TextBlock Grid.Row="0"  Grid.Column="1" Text="How is it going today? " Style="{StaticResource header}"/>
+        <DatePicker x:Name="Date" Grid.Row="0"  Grid.Column="1" Margin="350, 40,0,0" DateChanged="Date_DateChanged"/>
+        <TextBox x:Name="title" PlaceholderText="Title.."  Grid.Row="1" Grid.Column="1"  HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" FontSize="30" AcceptsReturn="True"   BorderThickness="0"/>
+        <TextBox x:Name="detail" PlaceholderText="Today, I was..." Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"   AcceptsReturn="True" TextWrapping="Wrap" ScrollViewer.VerticalScrollBarVisibility="Visible" Margin="0,50,0,0" 
+                         BorderThickness="0" BorderBrush="{ThemeResource SystemControlBackgroundListMediumRevealBorderBrush}" FontSize="30"/>
+        <TextBlock Grid.Row="3" Text="Tags" Width="100" Height="50" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,0,0,0"/>
+        <TextBox x:Name="NewTag" PlaceholderText="NewTag"  Grid.Row="3" Grid.Column="1"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Height="40" FontSize="20" AcceptsReturn="True"  Margin="280,0,0,0" BorderThickness="2"/>
+        <Button Grid.Row="3" Margin="450,0,0,0" Width="70" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Click" Content="AddTag"/>
+        <ComboBox x:Name="Tags" Grid.Row="3" Margin="100,0,0,0" Width="150" Height="40" VerticalAlignment="Top" ItemsSource="{x:Bind tags}" />
+        <Image x:Name="pic" Grid.Row="2" HorizontalAlignment="Left" Width="300" Margin="40, 0, 0, 0" Height="150"/>
+        <Image x:Name="icon" Grid.Row="0" Width="50" Height="50" Stretch="UniformToFill" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0, 0, 100, 0"/>
+        <CommandBar  Grid.Row="3" VerticalAlignment="Bottom" x:Name="DeleteBar"  Background="{ThemeResource SystemControlAccentAcrylicElementAccentMediumHighBrush}">
+            <AppBarButton x:Name="AddAppBarButton" Icon="add"  Label="Add"  
+                          Style="{ThemeResource AppBarButtonRevealStyle}" Click="AddAppBarButton_Click"/>
+            <AppBarButton x:Name="DeleteAppBarButton" Icon="Delete" Label="Delete"  
+                          Style="{ThemeResource AppBarButtonRevealStyle}" Click="DeleteAppBarButton_Click"/>
+            <AppBarButton x:Name="SelectPic" Icon="Pictures" Label="Pictures" Click="openFile"/>
+            <AppBarButton x:Name="SelectMedia" Icon="Audio" Label="Music" Click="chose_Click"/>
+        </CommandBar>
+    </Grid>
+</Page>
