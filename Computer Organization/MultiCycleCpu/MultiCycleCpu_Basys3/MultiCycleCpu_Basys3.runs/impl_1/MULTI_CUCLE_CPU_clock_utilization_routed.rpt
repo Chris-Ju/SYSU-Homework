@@ -1,0 +1,939 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date              : Fri Jun 22 08:42:34 2018
+| Host              : ChrisJu running 64-bit major release  (build 9200)
+| Command           : report_clock_utilization -file MULTI_CUCLE_CPU_clock_utilization_routed.rpt
+| Design            : MULTI_CUCLE_CPU
+| Device            : 7a35t-cpg236
+| Speed File        : -1  PRODUCTION 1.14 2014-09-11
+| Temperature Grade : C
+--------------------------------------------------------------------------------------------------
+
+Clock Utilization Report
+
+Table of Contents
+-----------------
+1. Clock Primitive Utilization
+2. Details of Global Clocks
+3. Details of Regional Clocks
+4. Details of Multi-Regional Clocks
+5. Details of I/O Clocks
+6. Details of Local Clocks
+7. Clock Regions : Key Resource Utilization
+8. Net wise resources used in clock region X1Y0
+
+1. Clock Primitive Utilization
+------------------------------
+
++-------+------+-----------+-----------+
+| Type  | Used | Available | Num Fixed |
++-------+------+-----------+-----------+
+| BUFG  |    2 |        32 |         0 |
+| BUFH  |    0 |        72 |         0 |
+| BUFIO |    0 |        20 |         0 |
+| MMCM  |    0 |         5 |         0 |
+| PLL   |    0 |         5 |         0 |
+| BUFR  |    0 |        20 |         0 |
+| BUFMR |    0 |        10 |         0 |
++-------+------+-----------+-----------+
+
+
+2. Details of Global Clocks
+---------------------------
+
++-------+----------------------+-----------------+--------------+-------+
+|       |                      |                 |   Num Loads  |       |
++-------+----------------------+-----------------+------+-------+-------+
+| Index | BUFG Cell            | Net Name        | BELs | Sites | Fixed |
++-------+----------------------+-----------------+------+-------+-------+
+|     1 | CLK_Q_IBUF_BUFG_inst | CLK_Q_IBUF_BUFG |   34 |    10 |    no |
+|     2 | CLK_IBUF_BUFG_inst   | CLK_IBUF_BUFG   | 1239 |   671 |    no |
++-------+----------------------+-----------------+------+-------+-------+
+
+
+3. Details of Regional Clocks
+-----------------------------
+
+4. Details of Multi-Regional Clocks
+-----------------------------------
+
+5. Details of I/O Clocks
+------------------------
+
+6. Details of Local Clocks
+--------------------------
+
++-------+-----------------------------+---------------------------------+--------------+-------+
+|       |                             |                                 |   Num Loads  |       |
++-------+-----------------------------+---------------------------------+------+-------+-------+
+| Index | Local Clk Src               | Net Name                        | BELs | Sites | Fixed |
++-------+-----------------------------+---------------------------------+------+-------+-------+
+|     1 | aluoutdr/RAM_reg[34][7]_i_2 | aluoutdr/DATA_out_reg[7]_100[0] |    8 |     5 |    no |
+|     2 | aluoutdr/RAM_reg[35][7]_i_2 | aluoutdr/DATA_out_reg[7]_103[0] |    8 |     5 |    no |
+|     3 | aluoutdr/RAM_reg[36][7]_i_2 | aluoutdr/DATA_out_reg[7]_106[0] |    8 |     6 |    no |
+|     4 | aluoutdr/RAM_reg[37][7]_i_2 | aluoutdr/DATA_out_reg[7]_109[0] |    8 |     5 |    no |
+|     5 | aluoutdr/RAM_reg[4][7]_i_2  | aluoutdr/DATA_out_reg[7]_10[0]  |    8 |     5 |    no |
+|     6 | aluoutdr/RAM_reg[38][7]_i_2 | aluoutdr/DATA_out_reg[7]_112[0] |    8 |     5 |    no |
+|     7 | aluoutdr/RAM_reg[39][7]_i_2 | aluoutdr/DATA_out_reg[7]_115[0] |    8 |     8 |    no |
+|     8 | aluoutdr/RAM_reg[40][7]_i_2 | aluoutdr/DATA_out_reg[7]_118[0] |    8 |     5 |    no |
+|     9 | aluoutdr/RAM_reg[41][7]_i_2 | aluoutdr/DATA_out_reg[7]_121[0] |    8 |     4 |    no |
+|    10 | aluoutdr/RAM_reg[42][7]_i_2 | aluoutdr/DATA_out_reg[7]_124[0] |    8 |     8 |    no |
+|    11 | aluoutdr/RAM_reg[43][7]_i_2 | aluoutdr/DATA_out_reg[7]_127[0] |    8 |     5 |    no |
+|    12 | aluoutdr/RAM_reg[44][7]_i_2 | aluoutdr/DATA_out_reg[7]_130[0] |    8 |     3 |    no |
+|    13 | aluoutdr/RAM_reg[45][7]_i_2 | aluoutdr/DATA_out_reg[7]_133[0] |    8 |     3 |    no |
+|    14 | aluoutdr/RAM_reg[46][7]_i_2 | aluoutdr/DATA_out_reg[7]_136[0] |    8 |     3 |    no |
+|    15 | aluoutdr/RAM_reg[47][7]_i_2 | aluoutdr/DATA_out_reg[7]_139[0] |    8 |     4 |    no |
+|    16 | aluoutdr/RAM_reg[5][7]_i_2  | aluoutdr/DATA_out_reg[7]_13[0]  |    8 |     3 |    no |
+|    17 | aluoutdr/RAM_reg[48][7]_i_2 | aluoutdr/DATA_out_reg[7]_142[0] |    8 |     5 |    no |
+|    18 | aluoutdr/RAM_reg[49][7]_i_2 | aluoutdr/DATA_out_reg[7]_145[0] |    8 |     4 |    no |
+|    19 | aluoutdr/RAM_reg[50][7]_i_2 | aluoutdr/DATA_out_reg[7]_148[0] |    8 |     4 |    no |
+|    20 | aluoutdr/RAM_reg[51][7]_i_2 | aluoutdr/DATA_out_reg[7]_151[0] |    8 |     5 |    no |
+|    21 | aluoutdr/RAM_reg[52][7]_i_2 | aluoutdr/DATA_out_reg[7]_154[0] |    8 |     7 |    no |
+|    22 | aluoutdr/RAM_reg[53][7]_i_2 | aluoutdr/DATA_out_reg[7]_157[0] |    8 |     6 |    no |
+|    23 | aluoutdr/RAM_reg[54][7]_i_2 | aluoutdr/DATA_out_reg[7]_160[0] |    8 |     5 |    no |
+|    24 | aluoutdr/RAM_reg[55][7]_i_2 | aluoutdr/DATA_out_reg[7]_163[0] |    8 |     5 |    no |
+|    25 | aluoutdr/RAM_reg[56][7]_i_2 | aluoutdr/DATA_out_reg[7]_166[0] |    8 |     5 |    no |
+|    26 | aluoutdr/RAM_reg[57][7]_i_2 | aluoutdr/DATA_out_reg[7]_169[0] |    8 |     3 |    no |
+|    27 | aluoutdr/RAM_reg[6][7]_i_2  | aluoutdr/DATA_out_reg[7]_16[0]  |    8 |     4 |    no |
+|    28 | aluoutdr/RAM_reg[58][7]_i_2 | aluoutdr/DATA_out_reg[7]_172[0] |    8 |     8 |    no |
+|    29 | aluoutdr/RAM_reg[59][7]_i_2 | aluoutdr/DATA_out_reg[7]_175[0] |    8 |     5 |    no |
+|    30 | aluoutdr/RAM_reg[60][7]_i_2 | aluoutdr/DATA_out_reg[7]_178[0] |    8 |     3 |    no |
+|    31 | aluoutdr/RAM_reg[61][7]_i_2 | aluoutdr/DATA_out_reg[7]_181[0] |    8 |     4 |    no |
+|    32 | aluoutdr/RAM_reg[62][7]_i_2 | aluoutdr/DATA_out_reg[7]_184[0] |    8 |     3 |    no |
+|    33 | aluoutdr/RAM_reg[63][7]_i_2 | aluoutdr/DATA_out_reg[7]_187[0] |    8 |     4 |    no |
+|    34 | aluoutdr/RAM_reg[64][7]_i_2 | aluoutdr/DATA_out_reg[7]_190[0] |    8 |     5 |    no |
+|    35 | aluoutdr/RAM_reg[65][7]_i_2 | aluoutdr/DATA_out_reg[7]_193[0] |    8 |     4 |    no |
+|    36 | aluoutdr/RAM_reg[66][7]_i_2 | aluoutdr/DATA_out_reg[7]_196[0] |    8 |     2 |    no |
+|    37 | aluoutdr/RAM_reg[67][7]_i_2 | aluoutdr/DATA_out_reg[7]_199[0] |    8 |     8 |    no |
+|    38 | aluoutdr/RAM_reg[7][7]_i_2  | aluoutdr/DATA_out_reg[7]_19[0]  |    8 |     5 |    no |
+|    39 | aluoutdr/RAM_reg[1][7]_i_2  | aluoutdr/DATA_out_reg[7]_1[0]   |    8 |     4 |    no |
+|    40 | aluoutdr/RAM_reg[68][7]_i_2 | aluoutdr/DATA_out_reg[7]_202[0] |    8 |     6 |    no |
+|    41 | aluoutdr/RAM_reg[69][7]_i_2 | aluoutdr/DATA_out_reg[7]_205[0] |    8 |     4 |    no |
+|    42 | aluoutdr/RAM_reg[70][7]_i_2 | aluoutdr/DATA_out_reg[7]_208[0] |    8 |     5 |    no |
+|    43 | aluoutdr/RAM_reg[71][7]_i_2 | aluoutdr/DATA_out_reg[7]_211[0] |    8 |     3 |    no |
+|    44 | aluoutdr/RAM_reg[72][7]_i_2 | aluoutdr/DATA_out_reg[7]_214[0] |    8 |     3 |    no |
+|    45 | aluoutdr/RAM_reg[73][7]_i_2 | aluoutdr/DATA_out_reg[7]_217[0] |    8 |     3 |    no |
+|    46 | aluoutdr/RAM_reg[74][7]_i_2 | aluoutdr/DATA_out_reg[7]_220[0] |    8 |     6 |    no |
+|    47 | aluoutdr/RAM_reg[75][7]_i_2 | aluoutdr/DATA_out_reg[7]_223[0] |    8 |     3 |    no |
+|    48 | aluoutdr/RAM_reg[76][7]_i_2 | aluoutdr/DATA_out_reg[7]_226[0] |    8 |     6 |    no |
+|    49 | aluoutdr/RAM_reg[77][7]_i_2 | aluoutdr/DATA_out_reg[7]_229[0] |    8 |     6 |    no |
+|    50 | aluoutdr/RAM_reg[8][7]_i_2  | aluoutdr/DATA_out_reg[7]_22[0]  |    8 |     4 |    no |
+|    51 | aluoutdr/RAM_reg[78][7]_i_2 | aluoutdr/DATA_out_reg[7]_232[0] |    8 |     5 |    no |
+|    52 | aluoutdr/RAM_reg[79][7]_i_2 | aluoutdr/DATA_out_reg[7]_235[0] |    8 |     6 |    no |
+|    53 | aluoutdr/RAM_reg[80][7]_i_2 | aluoutdr/DATA_out_reg[7]_238[0] |    8 |     3 |    no |
+|    54 | aluoutdr/RAM_reg[81][7]_i_2 | aluoutdr/DATA_out_reg[7]_241[0] |    8 |     4 |    no |
+|    55 | aluoutdr/RAM_reg[82][7]_i_2 | aluoutdr/DATA_out_reg[7]_244[0] |    8 |     4 |    no |
+|    56 | aluoutdr/RAM_reg[83][7]_i_2 | aluoutdr/DATA_out_reg[7]_247[0] |    8 |     4 |    no |
+|    57 | aluoutdr/RAM_reg[84][7]_i_2 | aluoutdr/DATA_out_reg[7]_250[0] |    8 |     4 |    no |
+|    58 | aluoutdr/RAM_reg[85][7]_i_2 | aluoutdr/DATA_out_reg[7]_253[0] |    8 |     4 |    no |
+|    59 | aluoutdr/RAM_reg[86][7]_i_2 | aluoutdr/DATA_out_reg[7]_256[0] |    8 |     4 |    no |
+|    60 | aluoutdr/RAM_reg[87][7]_i_2 | aluoutdr/DATA_out_reg[7]_259[0] |    8 |     6 |    no |
+|    61 | aluoutdr/RAM_reg[9][7]_i_2  | aluoutdr/DATA_out_reg[7]_25[0]  |    8 |     6 |    no |
+|    62 | aluoutdr/RAM_reg[88][7]_i_2 | aluoutdr/DATA_out_reg[7]_262[0] |    8 |     3 |    no |
+|    63 | aluoutdr/RAM_reg[89][7]_i_2 | aluoutdr/DATA_out_reg[7]_265[0] |    8 |     5 |    no |
+|    64 | aluoutdr/RAM_reg[90][7]_i_2 | aluoutdr/DATA_out_reg[7]_268[0] |    8 |     4 |    no |
+|    65 | aluoutdr/RAM_reg[91][7]_i_2 | aluoutdr/DATA_out_reg[7]_271[0] |    8 |     3 |    no |
+|    66 | aluoutdr/RAM_reg[92][7]_i_2 | aluoutdr/DATA_out_reg[7]_274[0] |    8 |     3 |    no |
+|    67 | aluoutdr/RAM_reg[93][7]_i_2 | aluoutdr/DATA_out_reg[7]_277[0] |    8 |     4 |    no |
+|    68 | aluoutdr/RAM_reg[94][7]_i_2 | aluoutdr/DATA_out_reg[7]_280[0] |    8 |     6 |    no |
+|    69 | aluoutdr/RAM_reg[95][7]_i_2 | aluoutdr/DATA_out_reg[7]_283[0] |    8 |     5 |    no |
+|    70 | aluoutdr/RAM_reg[96][7]_i_2 | aluoutdr/DATA_out_reg[7]_286[0] |    8 |     5 |    no |
+|    71 | aluoutdr/RAM_reg[97][7]_i_2 | aluoutdr/DATA_out_reg[7]_289[0] |    8 |     4 |    no |
+|    72 | aluoutdr/RAM_reg[10][7]_i_2 | aluoutdr/DATA_out_reg[7]_28[0]  |    8 |     7 |    no |
+|    73 | aluoutdr/RAM_reg[98][7]_i_2 | aluoutdr/DATA_out_reg[7]_292[0] |    8 |     6 |    no |
+|    74 | aluoutdr/RAM_reg[99][7]_i_2 | aluoutdr/DATA_out_reg[7]_295[0] |    8 |     7 |    no |
+|    75 | aluoutdr/RAM_reg[11][7]_i_2 | aluoutdr/DATA_out_reg[7]_31[0]  |    8 |     6 |    no |
+|    76 | aluoutdr/RAM_reg[12][7]_i_2 | aluoutdr/DATA_out_reg[7]_34[0]  |    8 |     5 |    no |
+|    77 | aluoutdr/RAM_reg[13][7]_i_2 | aluoutdr/DATA_out_reg[7]_37[0]  |    8 |     5 |    no |
+|    78 | aluoutdr/RAM_reg[14][7]_i_2 | aluoutdr/DATA_out_reg[7]_40[0]  |    8 |     3 |    no |
+|    79 | aluoutdr/RAM_reg[15][7]_i_2 | aluoutdr/DATA_out_reg[7]_43[0]  |    8 |     3 |    no |
+|    80 | aluoutdr/RAM_reg[16][7]_i_2 | aluoutdr/DATA_out_reg[7]_46[0]  |    8 |     6 |    no |
+|    81 | aluoutdr/RAM_reg[17][7]_i_2 | aluoutdr/DATA_out_reg[7]_49[0]  |    8 |     7 |    no |
+|    82 | aluoutdr/RAM_reg[2][7]_i_2  | aluoutdr/DATA_out_reg[7]_4[0]   |    8 |     3 |    no |
+|    83 | aluoutdr/RAM_reg[18][7]_i_2 | aluoutdr/DATA_out_reg[7]_52[0]  |    8 |     6 |    no |
+|    84 | aluoutdr/RAM_reg[19][7]_i_2 | aluoutdr/DATA_out_reg[7]_55[0]  |    8 |     3 |    no |
+|    85 | aluoutdr/RAM_reg[20][7]_i_2 | aluoutdr/DATA_out_reg[7]_58[0]  |    8 |     3 |    no |
+|    86 | aluoutdr/RAM_reg[21][7]_i_2 | aluoutdr/DATA_out_reg[7]_61[0]  |    8 |     4 |    no |
+|    87 | aluoutdr/RAM_reg[22][7]_i_2 | aluoutdr/DATA_out_reg[7]_64[0]  |    8 |     4 |    no |
+|    88 | aluoutdr/RAM_reg[23][7]_i_2 | aluoutdr/DATA_out_reg[7]_67[0]  |    8 |     7 |    no |
+|    89 | aluoutdr/RAM_reg[24][7]_i_2 | aluoutdr/DATA_out_reg[7]_70[0]  |    8 |     4 |    no |
+|    90 | aluoutdr/RAM_reg[25][7]_i_2 | aluoutdr/DATA_out_reg[7]_73[0]  |    8 |     3 |    no |
+|    91 | aluoutdr/RAM_reg[26][7]_i_2 | aluoutdr/DATA_out_reg[7]_76[0]  |    8 |     4 |    no |
+|    92 | aluoutdr/RAM_reg[27][7]_i_2 | aluoutdr/DATA_out_reg[7]_79[0]  |    8 |     3 |    no |
+|    93 | aluoutdr/RAM_reg[3][7]_i_2  | aluoutdr/DATA_out_reg[7]_7[0]   |    8 |     3 |    no |
+|    94 | aluoutdr/RAM_reg[28][7]_i_2 | aluoutdr/DATA_out_reg[7]_82[0]  |    8 |     3 |    no |
+|    95 | aluoutdr/RAM_reg[29][7]_i_2 | aluoutdr/DATA_out_reg[7]_85[0]  |    8 |     5 |    no |
+|    96 | aluoutdr/RAM_reg[30][7]_i_2 | aluoutdr/DATA_out_reg[7]_88[0]  |    8 |     5 |    no |
+|    97 | aluoutdr/RAM_reg[31][7]_i_2 | aluoutdr/DATA_out_reg[7]_91[0]  |    8 |     2 |    no |
+|    98 | aluoutdr/RAM_reg[32][7]_i_2 | aluoutdr/DATA_out_reg[7]_94[0]  |    8 |     4 |    no |
+|    99 | aluoutdr/RAM_reg[33][7]_i_2 | aluoutdr/DATA_out_reg[7]_97[0]  |    8 |     5 |    no |
+|   100 | aluoutdr/RAM_reg[0][7]_i_2  | aluoutdr/E[0]                   |    8 |     4 |    no |
++-------+-----------------------------+---------------------------------+------+-------+-------+
+
+
+7. Clock Regions : Key Resource Utilization
+-------------------------------------------
+
++-------------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+|                   | Global Clock |     BUFRs    |    BUFMRs    |    BUFIOs    |     MMCM     |      PLL     |      GT      |      PCI     |    ILOGIC    |    OLOGIC    |      FF      |     LUTM     |    RAMB18    |    RAMB36    |    DSP48E1   |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+| Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+| X0Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  233 |  9600 |    0 |  1600 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 1840 | 12000 |    0 |  1800 |    0 |    40 |    0 |    20 |    0 |    20 |
+| X0Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  9600 |    0 |  1600 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 12000 |    0 |  1800 |    0 |    40 |    0 |    20 |    0 |    20 |
+| X0Y2              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 14400 |    0 |  1600 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y2              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     5 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |  7600 |    0 |  1200 |    0 |    10 |    0 |     5 |    0 |    20 |
++-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
+* RAMB36 site can be used as two RAMB18/FIFO18 sites.
+
+
+8. Net wise resources used in clock region X1Y0
+-----------------------------------------------
+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-----------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |  Clock Net Name |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-----------------+
+| BUFG        | BUFHCE_X1Y9 |   no  |         0 |        0 |       0 |         0 |       0 |       0 |   34 |     0 |        0 | CLK_Q_IBUF_BUFG |
+| BUFG        | BUFHCE_X1Y8 |   no  |         0 |        0 |       0 |         0 |       0 |       0 | 1239 |     0 |        0 | CLK_IBUF_BUFG   |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-----------------+
+
+
+
+# Location of BUFG Primitives 
+set_property LOC BUFGCTRL_X0Y0 [get_cells CLK_IBUF_BUFG_inst]
+set_property LOC BUFGCTRL_X0Y1 [get_cells CLK_Q_IBUF_BUFG_inst]
+
+# Location of IO Clock Primitives
+
+# Location of MMCM Clock Primitives
+
+# Location of BUFH Clock Primitives
+
+# Location of BUFR Clock Primitives
+
+# Location of BUFMR Clock Primitives
+
+# Location of PLL Clock Primitives
+
+# Location of IO Primitives which is load of clock spine
+
+# Location of clock ports
+set_property LOC IOB_X0Y16 [get_ports CLK]
+set_property LOC IOB_X1Y26 [get_ports CLK_Q]
+
+# Clock net "CLK_IBUF_BUFG" driven by instance "CLK_IBUF_BUFG_inst" located at site "BUFGCTRL_X0Y0"
+#startgroup
+create_pblock {CLKAG_CLK_IBUF_BUFG}
+add_cells_to_pblock [get_pblocks  {CLKAG_CLK_IBUF_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="CLK_IBUF_BUFG"}]]]
+resize_pblock [get_pblocks {CLKAG_CLK_IBUF_BUFG}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "CLK_Q_IBUF_BUFG" driven by instance "CLK_Q_IBUF_BUFG_inst" located at site "BUFGCTRL_X0Y1"
+#startgroup
+create_pblock {CLKAG_CLK_Q_IBUF_BUFG}
+add_cells_to_pblock [get_pblocks  {CLKAG_CLK_Q_IBUF_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="CLK_Q_IBUF_BUFG"}]]]
+resize_pblock [get_pblocks {CLKAG_CLK_Q_IBUF_BUFG}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_100[0]" driven by instance "aluoutdr/RAM_reg[34][7]_i_2" located at site "SLICE_X13Y6"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_100[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_100[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_100[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_100[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_103[0]" driven by instance "aluoutdr/RAM_reg[35][7]_i_2" located at site "SLICE_X14Y1"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_103[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_103[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_103[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_103[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_106[0]" driven by instance "aluoutdr/RAM_reg[36][7]_i_2" located at site "SLICE_X30Y4"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_106[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_106[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_106[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_106[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_109[0]" driven by instance "aluoutdr/RAM_reg[37][7]_i_2" located at site "SLICE_X13Y8"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_109[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_109[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_109[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_109[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_10[0]" driven by instance "aluoutdr/RAM_reg[4][7]_i_2" located at site "SLICE_X49Y6"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_10[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_10[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_10[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_10[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_112[0]" driven by instance "aluoutdr/RAM_reg[38][7]_i_2" located at site "SLICE_X15Y7"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_112[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_112[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_112[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_112[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_115[0]" driven by instance "aluoutdr/RAM_reg[39][7]_i_2" located at site "SLICE_X44Y3"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_115[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_115[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_115[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_115[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_118[0]" driven by instance "aluoutdr/RAM_reg[40][7]_i_2" located at site "SLICE_X32Y6"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_118[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_118[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_118[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_118[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_121[0]" driven by instance "aluoutdr/RAM_reg[41][7]_i_2" located at site "SLICE_X15Y2"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_121[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_121[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_121[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_121[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_124[0]" driven by instance "aluoutdr/RAM_reg[42][7]_i_2" located at site "SLICE_X13Y2"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_124[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_124[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_124[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_124[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_127[0]" driven by instance "aluoutdr/RAM_reg[43][7]_i_2" located at site "SLICE_X14Y5"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_127[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_127[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_127[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_127[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_130[0]" driven by instance "aluoutdr/RAM_reg[44][7]_i_2" located at site "SLICE_X46Y1"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_130[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_130[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_130[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_130[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_133[0]" driven by instance "aluoutdr/RAM_reg[45][7]_i_2" located at site "SLICE_X52Y1"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_133[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_133[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_133[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_133[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_136[0]" driven by instance "aluoutdr/RAM_reg[46][7]_i_2" located at site "SLICE_X31Y4"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_136[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_136[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_136[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_136[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_139[0]" driven by instance "aluoutdr/RAM_reg[47][7]_i_2" located at site "SLICE_X15Y13"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_139[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_139[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_139[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_139[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_13[0]" driven by instance "aluoutdr/RAM_reg[5][7]_i_2" located at site "SLICE_X64Y4"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_13[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_13[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_13[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_13[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_142[0]" driven by instance "aluoutdr/RAM_reg[48][7]_i_2" located at site "SLICE_X28Y4"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_142[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_142[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_142[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_142[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_145[0]" driven by instance "aluoutdr/RAM_reg[49][7]_i_2" located at site "SLICE_X35Y0"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_145[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_145[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_145[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_145[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_148[0]" driven by instance "aluoutdr/RAM_reg[50][7]_i_2" located at site "SLICE_X34Y1"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_148[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_148[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_148[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_148[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_151[0]" driven by instance "aluoutdr/RAM_reg[51][7]_i_2" located at site "SLICE_X15Y1"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_151[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_151[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_151[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_151[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_154[0]" driven by instance "aluoutdr/RAM_reg[52][7]_i_2" located at site "SLICE_X49Y3"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_154[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_154[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_154[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_154[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_157[0]" driven by instance "aluoutdr/RAM_reg[53][7]_i_2" located at site "SLICE_X39Y1"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_157[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_157[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_157[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_157[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_160[0]" driven by instance "aluoutdr/RAM_reg[54][7]_i_2" located at site "SLICE_X29Y0"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_160[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_160[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_160[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_160[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_163[0]" driven by instance "aluoutdr/RAM_reg[55][7]_i_2" located at site "SLICE_X35Y11"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_163[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_163[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_163[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_163[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_166[0]" driven by instance "aluoutdr/RAM_reg[56][7]_i_2" located at site "SLICE_X29Y11"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_166[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_166[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_166[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_166[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_169[0]" driven by instance "aluoutdr/RAM_reg[57][7]_i_2" located at site "SLICE_X12Y9"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_169[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_169[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_169[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_169[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_16[0]" driven by instance "aluoutdr/RAM_reg[6][7]_i_2" located at site "SLICE_X65Y9"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_16[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_16[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_16[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_16[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_172[0]" driven by instance "aluoutdr/RAM_reg[58][7]_i_2" located at site "SLICE_X34Y8"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_172[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_172[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_172[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_172[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_175[0]" driven by instance "aluoutdr/RAM_reg[59][7]_i_2" located at site "SLICE_X49Y7"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_175[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_175[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_175[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_175[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_178[0]" driven by instance "aluoutdr/RAM_reg[60][7]_i_2" located at site "SLICE_X46Y6"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_178[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_178[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_178[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_178[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_181[0]" driven by instance "aluoutdr/RAM_reg[61][7]_i_2" located at site "SLICE_X39Y4"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_181[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_181[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_181[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_181[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_184[0]" driven by instance "aluoutdr/RAM_reg[62][7]_i_2" located at site "SLICE_X46Y3"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_184[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_184[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_184[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_184[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_187[0]" driven by instance "aluoutdr/RAM_reg[63][7]_i_2" located at site "SLICE_X34Y12"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_187[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_187[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_187[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_187[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_190[0]" driven by instance "aluoutdr/RAM_reg[64][7]_i_2" located at site "SLICE_X37Y16"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_190[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_190[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_190[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_190[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_193[0]" driven by instance "aluoutdr/RAM_reg[65][7]_i_2" located at site "SLICE_X44Y12"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_193[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_193[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_193[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_193[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_196[0]" driven by instance "aluoutdr/RAM_reg[66][7]_i_2" located at site "SLICE_X43Y18"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_196[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_196[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_196[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_196[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_199[0]" driven by instance "aluoutdr/RAM_reg[67][7]_i_2" located at site "SLICE_X32Y23"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_199[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_199[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_199[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_199[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_19[0]" driven by instance "aluoutdr/RAM_reg[7][7]_i_2" located at site "SLICE_X50Y16"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_19[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_19[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_19[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_19[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_1[0]" driven by instance "aluoutdr/RAM_reg[1][7]_i_2" located at site "SLICE_X64Y9"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_1[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_1[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_1[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_1[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_202[0]" driven by instance "aluoutdr/RAM_reg[68][7]_i_2" located at site "SLICE_X34Y20"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_202[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_202[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_202[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_202[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_205[0]" driven by instance "aluoutdr/RAM_reg[69][7]_i_2" located at site "SLICE_X44Y20"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_205[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_205[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_205[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_205[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_208[0]" driven by instance "aluoutdr/RAM_reg[70][7]_i_2" located at site "SLICE_X33Y22"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_208[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_208[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_208[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_208[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_211[0]" driven by instance "aluoutdr/RAM_reg[71][7]_i_2" located at site "SLICE_X36Y23"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_211[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_211[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_211[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_211[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_214[0]" driven by instance "aluoutdr/RAM_reg[72][7]_i_2" located at site "SLICE_X42Y13"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_214[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_214[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_214[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_214[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_217[0]" driven by instance "aluoutdr/RAM_reg[73][7]_i_2" located at site "SLICE_X37Y24"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_217[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_217[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_217[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_217[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_220[0]" driven by instance "aluoutdr/RAM_reg[74][7]_i_2" located at site "SLICE_X33Y20"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_220[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_220[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_220[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_220[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_223[0]" driven by instance "aluoutdr/RAM_reg[75][7]_i_2" located at site "SLICE_X51Y15"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_223[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_223[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_223[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_223[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_226[0]" driven by instance "aluoutdr/RAM_reg[76][7]_i_2" located at site "SLICE_X31Y23"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_226[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_226[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_226[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_226[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_229[0]" driven by instance "aluoutdr/RAM_reg[77][7]_i_2" located at site "SLICE_X32Y23"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_229[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_229[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_229[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_229[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_22[0]" driven by instance "aluoutdr/RAM_reg[8][7]_i_2" located at site "SLICE_X60Y12"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_22[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_22[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_22[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_22[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_232[0]" driven by instance "aluoutdr/RAM_reg[78][7]_i_2" located at site "SLICE_X32Y21"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_232[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_232[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_232[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_232[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_235[0]" driven by instance "aluoutdr/RAM_reg[79][7]_i_2" located at site "SLICE_X32Y24"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_235[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_235[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_235[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_235[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_238[0]" driven by instance "aluoutdr/RAM_reg[80][7]_i_2" located at site "SLICE_X12Y17"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_238[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_238[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_238[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_238[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_241[0]" driven by instance "aluoutdr/RAM_reg[81][7]_i_2" located at site "SLICE_X14Y22"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_241[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_241[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_241[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_241[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_244[0]" driven by instance "aluoutdr/RAM_reg[82][7]_i_2" located at site "SLICE_X28Y19"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_244[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_244[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_244[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_244[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_247[0]" driven by instance "aluoutdr/RAM_reg[83][7]_i_2" located at site "SLICE_X14Y20"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_247[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_247[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_247[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_247[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_250[0]" driven by instance "aluoutdr/RAM_reg[84][7]_i_2" located at site "SLICE_X13Y18"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_250[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_250[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_250[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_250[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_253[0]" driven by instance "aluoutdr/RAM_reg[85][7]_i_2" located at site "SLICE_X12Y15"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_253[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_253[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_253[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_253[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_256[0]" driven by instance "aluoutdr/RAM_reg[86][7]_i_2" located at site "SLICE_X13Y10"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_256[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_256[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_256[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_256[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_259[0]" driven by instance "aluoutdr/RAM_reg[87][7]_i_2" located at site "SLICE_X31Y23"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_259[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_259[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_259[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_259[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_25[0]" driven by instance "aluoutdr/RAM_reg[9][7]_i_2" located at site "SLICE_X54Y12"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_25[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_25[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_25[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_25[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_262[0]" driven by instance "aluoutdr/RAM_reg[88][7]_i_2" located at site "SLICE_X12Y18"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_262[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_262[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_262[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_262[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_265[0]" driven by instance "aluoutdr/RAM_reg[89][7]_i_2" located at site "SLICE_X30Y12"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_265[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_265[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_265[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_265[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_268[0]" driven by instance "aluoutdr/RAM_reg[90][7]_i_2" located at site "SLICE_X14Y9"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_268[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_268[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_268[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_268[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_271[0]" driven by instance "aluoutdr/RAM_reg[91][7]_i_2" located at site "SLICE_X14Y9"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_271[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_271[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_271[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_271[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_274[0]" driven by instance "aluoutdr/RAM_reg[92][7]_i_2" located at site "SLICE_X43Y11"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_274[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_274[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_274[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_274[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_277[0]" driven by instance "aluoutdr/RAM_reg[93][7]_i_2" located at site "SLICE_X49Y13"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_277[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_277[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_277[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_277[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_280[0]" driven by instance "aluoutdr/RAM_reg[94][7]_i_2" located at site "SLICE_X38Y17"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_280[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_280[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_280[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_280[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_283[0]" driven by instance "aluoutdr/RAM_reg[95][7]_i_2" located at site "SLICE_X32Y19"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_283[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_283[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_283[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_283[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_286[0]" driven by instance "aluoutdr/RAM_reg[96][7]_i_2" located at site "SLICE_X37Y13"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_286[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_286[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_286[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_286[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_289[0]" driven by instance "aluoutdr/RAM_reg[97][7]_i_2" located at site "SLICE_X39Y14"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_289[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_289[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_289[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_289[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_28[0]" driven by instance "aluoutdr/RAM_reg[10][7]_i_2" located at site "SLICE_X55Y11"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_28[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_28[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_28[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_28[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_292[0]" driven by instance "aluoutdr/RAM_reg[98][7]_i_2" located at site "SLICE_X33Y12"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_292[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_292[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_292[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_292[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_295[0]" driven by instance "aluoutdr/RAM_reg[99][7]_i_2" located at site "SLICE_X48Y11"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_295[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_295[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_295[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_295[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_31[0]" driven by instance "aluoutdr/RAM_reg[11][7]_i_2" located at site "SLICE_X49Y16"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_31[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_31[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_31[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_31[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_34[0]" driven by instance "aluoutdr/RAM_reg[12][7]_i_2" located at site "SLICE_X63Y6"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_34[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_34[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_34[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_34[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_37[0]" driven by instance "aluoutdr/RAM_reg[13][7]_i_2" located at site "SLICE_X63Y7"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_37[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_37[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_37[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_37[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_40[0]" driven by instance "aluoutdr/RAM_reg[14][7]_i_2" located at site "SLICE_X65Y5"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_40[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_40[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_40[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_40[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_43[0]" driven by instance "aluoutdr/RAM_reg[15][7]_i_2" located at site "SLICE_X50Y13"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_43[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_43[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_43[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_43[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_46[0]" driven by instance "aluoutdr/RAM_reg[16][7]_i_2" located at site "SLICE_X51Y11"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_46[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_46[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_46[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_46[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_49[0]" driven by instance "aluoutdr/RAM_reg[17][7]_i_2" located at site "SLICE_X49Y10"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_49[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_49[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_49[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_49[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_4[0]" driven by instance "aluoutdr/RAM_reg[2][7]_i_2" located at site "SLICE_X64Y10"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_4[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_4[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_4[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_4[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_52[0]" driven by instance "aluoutdr/RAM_reg[18][7]_i_2" located at site "SLICE_X56Y5"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_52[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_52[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_52[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_52[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_55[0]" driven by instance "aluoutdr/RAM_reg[19][7]_i_2" located at site "SLICE_X48Y1"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_55[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_55[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_55[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_55[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_58[0]" driven by instance "aluoutdr/RAM_reg[20][7]_i_2" located at site "SLICE_X61Y4"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_58[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_58[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_58[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_58[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_61[0]" driven by instance "aluoutdr/RAM_reg[21][7]_i_2" located at site "SLICE_X59Y0"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_61[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_61[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_61[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_61[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_64[0]" driven by instance "aluoutdr/RAM_reg[22][7]_i_2" located at site "SLICE_X63Y3"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_64[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_64[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_64[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_64[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_67[0]" driven by instance "aluoutdr/RAM_reg[23][7]_i_2" located at site "SLICE_X59Y11"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_67[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_67[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_67[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_67[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_70[0]" driven by instance "aluoutdr/RAM_reg[24][7]_i_2" located at site "SLICE_X60Y4"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_70[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_70[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_70[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_70[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_73[0]" driven by instance "aluoutdr/RAM_reg[25][7]_i_2" located at site "SLICE_X55Y3"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_73[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_73[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_73[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_73[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_76[0]" driven by instance "aluoutdr/RAM_reg[26][7]_i_2" located at site "SLICE_X60Y1"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_76[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_76[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_76[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_76[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_79[0]" driven by instance "aluoutdr/RAM_reg[27][7]_i_2" located at site "SLICE_X50Y8"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_79[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_79[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_79[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_79[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_7[0]" driven by instance "aluoutdr/RAM_reg[3][7]_i_2" located at site "SLICE_X64Y7"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_7[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_7[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_7[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_7[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_82[0]" driven by instance "aluoutdr/RAM_reg[28][7]_i_2" located at site "SLICE_X49Y1"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_82[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_82[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_82[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_82[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_85[0]" driven by instance "aluoutdr/RAM_reg[29][7]_i_2" located at site "SLICE_X61Y1"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_85[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_85[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_85[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_85[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_88[0]" driven by instance "aluoutdr/RAM_reg[30][7]_i_2" located at site "SLICE_X50Y1"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_88[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_88[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_88[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_88[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_91[0]" driven by instance "aluoutdr/RAM_reg[31][7]_i_2" located at site "SLICE_X36Y15"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_91[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_91[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_91[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_91[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_94[0]" driven by instance "aluoutdr/RAM_reg[32][7]_i_2" located at site "SLICE_X38Y8"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_94[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_94[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_94[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_94[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/DATA_out_reg[7]_97[0]" driven by instance "aluoutdr/RAM_reg[33][7]_i_2" located at site "SLICE_X46Y8"
+#startgroup
+create_pblock {CLKAG_aluoutdr/DATA_out_reg[7]_97[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/DATA_out_reg[7]_97[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/DATA_out_reg[7]_97[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/DATA_out_reg[7]_97[0]}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup
+
+# Clock net "aluoutdr/E[0]" driven by instance "aluoutdr/RAM_reg[0][7]_i_2" located at site "SLICE_X56Y13"
+#startgroup
+create_pblock {CLKAG_aluoutdr/E[0]}
+add_cells_to_pblock [get_pblocks  {CLKAG_aluoutdr/E[0]}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="aluoutdr/E[0]"}]]]
+resize_pblock [get_pblocks {CLKAG_aluoutdr/E[0]}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}
+#endgroup

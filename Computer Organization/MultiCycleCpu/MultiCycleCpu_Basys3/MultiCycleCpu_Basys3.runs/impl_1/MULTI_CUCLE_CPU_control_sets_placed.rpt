@@ -1,0 +1,192 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Fri Jun 22 08:41:46 2018
+| Host         : ChrisJu running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file MULTI_CUCLE_CPU_control_sets_placed.rpt
+| Design       : MULTI_CUCLE_CPU
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |   139 |
+| Minimum Number of register sites lost to control set restrictions |    15 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             934 |          513 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              40 |           20 |
+| Yes          | No                    | No                     |            1067 |          591 |
+| Yes          | No                    | Yes                    |              32 |           13 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------+----------------------------+-------------------------------+------------------+----------------+
+|           Clock Signal           |        Enable Signal       |        Set/Reset Signal       | Slice Load Count | Bel Load Count |
++----------------------------------+----------------------------+-------------------------------+------------------+----------------+
+| ~CLK_IBUF_BUFG                   |                            |                               |                2 |              3 |
+|  CLK_Q_IBUF_BUFG                 | display_out[6]_i_1_n_0     |                               |                4 |              7 |
+|  aluoutdr/DATA_out_reg[7]_67[0]  |                            |                               |                7 |              8 |
+|  aluoutdr/DATA_out_reg[7]_73[0]  |                            |                               |                3 |              8 |
+|  aluoutdr/DATA_out_reg[7]_64[0]  |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_61[0]  |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_58[0]  |                            |                               |                3 |              8 |
+|  aluoutdr/DATA_out_reg[7]_55[0]  |                            |                               |                3 |              8 |
+|  aluoutdr/DATA_out_reg[7]_52[0]  |                            |                               |                6 |              8 |
+|  aluoutdr/DATA_out_reg[7]_49[0]  |                            |                               |                7 |              8 |
+|  aluoutdr/DATA_out_reg[7]_46[0]  |                            |                               |                6 |              8 |
+|  aluoutdr/DATA_out_reg[7]_43[0]  |                            |                               |                3 |              8 |
+|  aluoutdr/DATA_out_reg[7]_40[0]  |                            |                               |                3 |              8 |
+|  aluoutdr/DATA_out_reg[7]_4[0]   |                            |                               |                3 |              8 |
+|  aluoutdr/DATA_out_reg[7]_37[0]  |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_124[0] |                            |                               |                8 |              8 |
+|  aluoutdr/DATA_out_reg[7]_121[0] |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_277[0] |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_274[0] |                            |                               |                3 |              8 |
+|  aluoutdr/DATA_out_reg[7]_268[0] |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_265[0] |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_262[0] |                            |                               |                3 |              8 |
+|  aluoutdr/DATA_out_reg[7]_259[0] |                            |                               |                6 |              8 |
+|  aluoutdr/DATA_out_reg[7]_256[0] |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_250[0] |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_25[0]  |                            |                               |                6 |              8 |
+|  aluoutdr/DATA_out_reg[7]_247[0] |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_244[0] |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_241[0] |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_235[0] |                            |                               |                6 |              8 |
+|  aluoutdr/DATA_out_reg[7]_232[0] |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_229[0] |                            |                               |                6 |              8 |
+|  aluoutdr/DATA_out_reg[7]_226[0] |                            |                               |                6 |              8 |
+|  aluoutdr/DATA_out_reg[7]_223[0] |                            |                               |                3 |              8 |
+|  aluoutdr/DATA_out_reg[7]_187[0] |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_184[0] |                            |                               |                3 |              8 |
+|  aluoutdr/DATA_out_reg[7]_178[0] |                            |                               |                3 |              8 |
+|  aluoutdr/DATA_out_reg[7]_175[0] |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_163[0] |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_160[0] |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_151[0] |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_148[0] |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_136[0] |                            |                               |                3 |              8 |
+|  aluoutdr/DATA_out_reg[7]_133[0] |                            |                               |                3 |              8 |
+|  aluoutdr/DATA_out_reg[7]_130[0] |                            |                               |                3 |              8 |
+|  aluoutdr/DATA_out_reg[7]_13[0]  |                            |                               |                3 |              8 |
+|  aluoutdr/E[0]                   |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_94[0]  |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_97[0]  |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_91[0]  |                            |                               |                2 |              8 |
+|  aluoutdr/DATA_out_reg[7]_88[0]  |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_85[0]  |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_79[0]  |                            |                               |                3 |              8 |
+|  aluoutdr/DATA_out_reg[7]_82[0]  |                            |                               |                3 |              8 |
+|  aluoutdr/DATA_out_reg[7]_76[0]  |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_118[0] |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_295[0] |                            |                               |                7 |              8 |
+|  aluoutdr/DATA_out_reg[7]_292[0] |                            |                               |                6 |              8 |
+|  aluoutdr/DATA_out_reg[7]_289[0] |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_271[0] |                            |                               |                3 |              8 |
+|  aluoutdr/DATA_out_reg[7]_253[0] |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_238[0] |                            |                               |                3 |              8 |
+|  aluoutdr/DATA_out_reg[7]_220[0] |                            |                               |                6 |              8 |
+|  aluoutdr/DATA_out_reg[7]_22[0]  |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_217[0] |                            |                               |                3 |              8 |
+|  aluoutdr/DATA_out_reg[7]_214[0] |                            |                               |                3 |              8 |
+|  aluoutdr/DATA_out_reg[7]_211[0] |                            |                               |                3 |              8 |
+|  aluoutdr/DATA_out_reg[7]_208[0] |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_205[0] |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_202[0] |                            |                               |                6 |              8 |
+|  aluoutdr/DATA_out_reg[7]_181[0] |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_172[0] |                            |                               |                8 |              8 |
+|  aluoutdr/DATA_out_reg[7]_169[0] |                            |                               |                3 |              8 |
+|  aluoutdr/DATA_out_reg[7]_166[0] |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_157[0] |                            |                               |                6 |              8 |
+|  aluoutdr/DATA_out_reg[7]_154[0] |                            |                               |                7 |              8 |
+|  aluoutdr/DATA_out_reg[7]_145[0] |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_139[0] |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_142[0] |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_115[0] |                            |                               |                8 |              8 |
+|  aluoutdr/DATA_out_reg[7]_127[0] |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_109[0] |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_106[0] |                            |                               |                6 |              8 |
+|  aluoutdr/DATA_out_reg[7]_103[0] |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_100[0] |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_10[0]  |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_1[0]   |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_286[0] |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_28[0]  |                            |                               |                7 |              8 |
+|  aluoutdr/DATA_out_reg[7]_190[0] |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_196[0] |                            |                               |                2 |              8 |
+|  aluoutdr/DATA_out_reg[7]_193[0] |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_34[0]  |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_31[0]  |                            |                               |                6 |              8 |
+|  aluoutdr/DATA_out_reg[7]_112[0] |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_280[0] |                            |                               |                6 |              8 |
+|  aluoutdr/DATA_out_reg[7]_199[0] |                            |                               |                8 |              8 |
+|  aluoutdr/DATA_out_reg[7]_19[0]  |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_283[0] |                            |                               |                5 |              8 |
+|  aluoutdr/DATA_out_reg[7]_16[0]  |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_70[0]  |                            |                               |                4 |              8 |
+|  aluoutdr/DATA_out_reg[7]_7[0]   |                            |                               |                3 |              8 |
+|  CLK_Q_IBUF_BUFG                 |                            |                               |                6 |             27 |
+|  CLK_IBUF_BUFG                   | d_flip_flop/E[0]           | pc/out[31]_i_3_n_0            |               13 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[9][31][0]  |                               |               16 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/E[0]                    |                               |               20 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[10][31][0] |                               |               20 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[11][31][0] |                               |               21 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[12][31][0] |                               |               19 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[13][31][0] |                               |               18 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[14][31][0] |                               |               18 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[15][31][0] |                               |               19 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[16][31][0] |                               |               19 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[17][31][0] |                               |               20 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[18][31][0] |                               |               21 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[19][31][0] |                               |               18 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[1][31][0]  |                               |               19 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[20][31][0] |                               |               18 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[21][31][0] |                               |               21 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[22][31][0] |                               |               20 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[23][31][0] |                               |               18 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[24][31][0] |                               |               16 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[25][31][0] |                               |               14 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[26][31][0] |                               |               16 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[27][31][0] |                               |               17 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[28][31][0] |                               |               15 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[29][31][0] |                               |               15 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[2][31][0]  |                               |               18 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[30][31][0] |                               |               15 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[31][31][0] |                               |               12 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[3][31][0]  |                               |               19 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[4][31][0]  |                               |               15 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[5][31][0]  |                               |               15 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[6][31][0]  |                               |               18 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[7][31][0]  |                               |               18 |             32 |
+| ~CLK_IBUF_BUFG                   | ir/register_reg[8][31][0]  |                               |               19 |             32 |
+| ~CLK_IBUF_BUFG                   | d_flip_flop/IRWre          |                               |               20 |             36 |
+|  CLK_IBUF_BUFG                   |                            | aluoutdr/DATA_out[31]_i_1_n_0 |               20 |             40 |
+|  CLK_IBUF_BUFG                   |                            |                               |               49 |            104 |
++----------------------------------+----------------------------+-------------------------------+------------------+----------------+
+
+

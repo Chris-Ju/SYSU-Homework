@@ -1,0 +1,791 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Fri Jun 22 08:38:50 2018
+# Process ID: 6812
+# Log file: E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.runs/synth_1/MULTI_CUCLE_CPU.vds
+# Journal file: E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source MULTI_CUCLE_CPU.tcl -notrace
+Command: synth_design -top MULTI_CUCLE_CPU -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-1223] The version limit for your license is '2017.03' and will expire in -448 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/SA_EXTEND.v:28]
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/NUMBER_EXTEND.v:29]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 274.945 ; gain = 101.438
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'MULTI_CUCLE_CPU' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:23]
+	Parameter endReg bound to: 5'b11111 
+	Parameter T1MS bound to: 50000 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'PC' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/PC.v:23]
+INFO: [Synth 8-256] done synthesizing module 'PC' (1#1) [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/PC.v:23]
+INFO: [Synth 8-638] synthesizing module 'PC_ADD_FOUR' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/PC_ADD_FOUR.v:23]
+INFO: [Synth 8-256] done synthesizing module 'PC_ADD_FOUR' (2#1) [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/PC_ADD_FOUR.v:23]
+INFO: [Synth 8-638] synthesizing module 'PC_OFFSET' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/PC_OFFSET.v:23]
+INFO: [Synth 8-256] done synthesizing module 'PC_OFFSET' (3#1) [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/PC_OFFSET.v:23]
+INFO: [Synth 8-638] synthesizing module 'PC_JUMP' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/PC_JUMP.v:23]
+WARNING: [Synth 8-567] referenced signal 'pc_in' should be on the sensitivity list [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/PC_JUMP.v:31]
+INFO: [Synth 8-256] done synthesizing module 'PC_JUMP' (4#1) [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/PC_JUMP.v:23]
+INFO: [Synth 8-638] synthesizing module 'FOUR_TO_ONE' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/FOUR_TO_ONE.v:23]
+INFO: [Synth 8-256] done synthesizing module 'FOUR_TO_ONE' (5#1) [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/FOUR_TO_ONE.v:23]
+INFO: [Synth 8-638] synthesizing module 'INS_MEM_RW' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/INS_MEM_RW.v:23]
+INFO: [Synth 8-3876] $readmem data file 'E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu/mem.txt' is read successfully [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/INS_MEM_RW.v:31]
+INFO: [Synth 8-256] done synthesizing module 'INS_MEM_RW' (6#1) [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/INS_MEM_RW.v:23]
+INFO: [Synth 8-638] synthesizing module 'IR' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/IR.v:23]
+INFO: [Synth 8-256] done synthesizing module 'IR' (7#1) [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/IR.v:23]
+INFO: [Synth 8-638] synthesizing module 'INS_DEC' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/INS_DEC.v:23]
+INFO: [Synth 8-256] done synthesizing module 'INS_DEC' (8#1) [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/INS_DEC.v:23]
+INFO: [Synth 8-638] synthesizing module 'TWO_TO_ONE' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/TWO_TO_ONE.v:23]
+INFO: [Synth 8-256] done synthesizing module 'TWO_TO_ONE' (9#1) [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/TWO_TO_ONE.v:23]
+INFO: [Synth 8-638] synthesizing module 'THREE_TO_ONE' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/THREE_TO_ONE.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/THREE_TO_ONE.v:32]
+INFO: [Synth 8-256] done synthesizing module 'THREE_TO_ONE' (10#1) [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/THREE_TO_ONE.v:23]
+WARNING: [Synth 8-689] width (5) of port connection 'DATA_2' does not match port width (32) of module 'THREE_TO_ONE' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:70]
+WARNING: [Synth 8-689] width (5) of port connection 'DATA_3' does not match port width (32) of module 'THREE_TO_ONE' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:70]
+WARNING: [Synth 8-689] width (5) of port connection 'out' does not match port width (32) of module 'THREE_TO_ONE' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:70]
+INFO: [Synth 8-638] synthesizing module 'REGISTER_FILE' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/REGISTER_FILE.v:23]
+INFO: [Synth 8-256] done synthesizing module 'REGISTER_FILE' (11#1) [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/REGISTER_FILE.v:23]
+INFO: [Synth 8-638] synthesizing module 'DR' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DR.v:23]
+INFO: [Synth 8-256] done synthesizing module 'DR' (12#1) [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DR.v:23]
+INFO: [Synth 8-638] synthesizing module 'SA_EXTEND' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/SA_EXTEND.v:23]
+INFO: [Synth 8-256] done synthesizing module 'SA_EXTEND' (13#1) [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/SA_EXTEND.v:23]
+INFO: [Synth 8-638] synthesizing module 'ALU' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/ALU.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (14#1) [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/ALU.v:23]
+INFO: [Synth 8-638] synthesizing module 'DATA_MEM' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:23]
+INFO: [Synth 8-256] done synthesizing module 'DATA_MEM' (15#1) [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:23]
+INFO: [Synth 8-638] synthesizing module 'NUMBER_EXTEND' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/NUMBER_EXTEND.v:23]
+INFO: [Synth 8-256] done synthesizing module 'NUMBER_EXTEND' (16#1) [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/NUMBER_EXTEND.v:23]
+INFO: [Synth 8-638] synthesizing module 'CONTROL_UNIT' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/CONTROL_UNIT.v:23]
+	Parameter IF bound to: 3'b000 
+	Parameter ID bound to: 3'b001 
+	Parameter aEXE bound to: 3'b110 
+	Parameter bEXE bound to: 3'b111 
+	Parameter cEXE bound to: 3'b010 
+	Parameter MEM bound to: 3'b100 
+	Parameter WB bound to: 3'b011 
+	Parameter add bound to: 6'b000000 
+	Parameter sub bound to: 6'b000001 
+	Parameter addi bound to: 6'b000010 
+	Parameter ori bound to: 6'b010010 
+	Parameter Or bound to: 6'b010000 
+	Parameter And bound to: 6'b010001 
+	Parameter sll bound to: 6'b011000 
+	Parameter slt bound to: 6'b100110 
+	Parameter sltiu bound to: 6'b100111 
+	Parameter sw bound to: 6'b110000 
+	Parameter lw bound to: 6'b110001 
+	Parameter beq bound to: 6'b110100 
+	Parameter bltz bound to: 6'b110110 
+	Parameter j bound to: 6'b111000 
+	Parameter jr bound to: 6'b111001 
+	Parameter jal bound to: 6'b111010 
+	Parameter halt bound to: 6'b111111 
+WARNING: [Synth 8-567] referenced signal 'zero' should be on the sensitivity list [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/CONTROL_UNIT.v:74]
+WARNING: [Synth 8-567] referenced signal 'sign' should be on the sensitivity list [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/CONTROL_UNIT.v:74]
+INFO: [Synth 8-256] done synthesizing module 'CONTROL_UNIT' (17#1) [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/CONTROL_UNIT.v:23]
+INFO: [Synth 8-638] synthesizing module 'NEXT_STATE' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/NEXT_STATE.v:23]
+	Parameter IF bound to: 3'b000 
+	Parameter ID bound to: 3'b001 
+	Parameter aEXE bound to: 3'b110 
+	Parameter bEXE bound to: 3'b111 
+	Parameter cEXE bound to: 3'b010 
+	Parameter MEM bound to: 3'b100 
+	Parameter WB bound to: 3'b011 
+INFO: [Synth 8-256] done synthesizing module 'NEXT_STATE' (18#1) [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/NEXT_STATE.v:23]
+INFO: [Synth 8-638] synthesizing module 'D_FLIP_FLOP' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/D_FLIP_FLOP.v:23]
+INFO: [Synth 8-256] done synthesizing module 'D_FLIP_FLOP' (19#1) [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/D_FLIP_FLOP.v:23]
+INFO: [Synth 8-638] synthesizing module 'SegLED' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/new/SegLED.v:22]
+INFO: [Synth 8-226] default block is never used [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/new/SegLED.v:28]
+INFO: [Synth 8-256] done synthesizing module 'SegLED' (20#1) [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/new/SegLED.v:22]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:116]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:117]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:118]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:119]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:120]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:121]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:122]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:123]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:124]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:125]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:126]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:127]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:128]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:129]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:130]
+WARNING: [Synth 8-689] width (8) of port connection 'dispCode' does not match port width (7) of module 'SegLED' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:131]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:147]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:167]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:187]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:207]
+INFO: [Synth 8-256] done synthesizing module 'MULTI_CUCLE_CPU' (21#1) [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/MULTI_CUCLE_CPU.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 313.902 ; gain = 140.395
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 313.902 ; gain = 140.395
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/constrs_1/new/port.xdc]
+WARNING: [Vivado 12-507] No nets matched 'CLK_IBUF'. [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/constrs_1/new/port.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/constrs_1/new/port.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/constrs_1/new/port.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 611.914 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 611.914 ; gain = 438.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 611.914 ; gain = 438.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 611.914 ; gain = 438.406
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "register_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "register_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/ALU.v:31]
+INFO: [Synth 8-5545] ROM "zero" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[11]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[11]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[11]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[11]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[18]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[18]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[18]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[18]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[19]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[19]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[19]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[19]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[20]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[20]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[20]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[20]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[21]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[21]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[21]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[21]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[22]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[22]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[22]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[22]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[23]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[23]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[23]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[23]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[24]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[24]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "RAM_reg[24]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5546] ROM "ALUSrcA0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "WrRegDSrc0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "IRWre0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "STATE_next" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-327] inferring latch for variable 'out_reg' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/THREE_TO_ONE.v:33]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[0]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[1]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[2]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[3]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[4]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[5]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[6]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[7]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[8]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[9]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[10]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[11]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[12]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[13]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[14]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[15]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[16]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[17]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[18]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[19]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[20]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[21]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[22]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[23]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[24]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[25]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[26]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[27]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[28]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[29]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[30]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[31]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[32]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[33]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[34]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[35]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[36]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[37]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[38]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[39]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[40]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[41]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[42]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[43]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[44]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[45]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[46]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[47]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[48]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[49]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[50]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[51]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[52]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[53]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[54]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[55]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[56]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[57]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[58]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[59]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[60]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[61]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[62]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[63]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[64]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[65]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[66]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[67]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[68]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[69]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[70]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[71]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[72]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[73]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[74]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[75]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[76]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[77]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[78]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[79]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[80]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[81]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[82]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[83]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[84]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[85]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[86]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[87]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[88]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[89]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[90]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[91]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[92]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[93]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[94]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[95]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[96]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[97]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'RAM_reg[98]' [E:/Computer Organization/Experiment/MultiCycleCpu/MultiCycleCpu_Basys3/MultiCycleCpu_Basys3.srcs/sources_1/imports/new/DATA_MEM.v:41]
+INFO: [Common 17-14] Message 'Synth 8-327' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 611.914 ; gain = 438.406
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'seg5' (SegLED) to 'seg9'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 8     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 5     
+	               20 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 5     
+	   8 Input     32 Bit        Muxes := 1     
+	   4 Input     11 Bit        Muxes := 5     
+	   2 Input     11 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 300   
+	  16 Input      7 Bit        Muxes := 15    
+	  11 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 7     
+	   4 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 34    
+	   5 Input      1 Bit        Muxes := 101   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module MULTI_CUCLE_CPU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               20 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     11 Bit        Muxes := 5     
+	   2 Input     11 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module PC 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module PC_ADD_FOUR 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module PC_OFFSET 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module FOUR_TO_ONE 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+Module INS_MEM_RW 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+Module TWO_TO_ONE 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module THREE_TO_ONE 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module REGISTER_FILE 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module DR 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	   8 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module DATA_MEM 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input      7 Bit       Adders := 3     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 300   
+	   5 Input      1 Bit        Muxes := 100   
+Module NUMBER_EXTEND 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module CONTROL_UNIT 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 6     
+Module NEXT_STATE 
+Detailed RTL Component Info : 
++---Muxes : 
+	  11 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module SegLED 
+Detailed RTL Component Info : 
++---Muxes : 
+	  16 Input      7 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 611.914 ; gain = 438.406
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 611.914 ; gain = 438.406
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 611.914 ; gain = 438.406
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|INS_MEM_RW  | rom        | 128x8         | LUT            | 
+|INS_MEM_RW  | rom__1     | 128x8         | LUT            | 
+|INS_MEM_RW  | rom__2     | 128x8         | LUT            | 
+|INS_MEM_RW  | rom__3     | 128x8         | LUT            | 
+|INS_MEM_RW  | rom        | 128x8         | LUT            | 
+|INS_MEM_RW  | rom__4     | 128x8         | LUT            | 
+|INS_MEM_RW  | rom__5     | 128x8         | LUT            | 
+|INS_MEM_RW  | rom__6     | 128x8         | LUT            | 
++------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (\out_reg[31] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[30] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[29] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[28] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[27] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[26] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[25] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[24] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[23] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[22] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[21] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[20] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[19] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[18] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[17] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[16] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[15] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[14] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[13] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[12] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[11] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[10] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[9] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[8] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[7] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[6] ) is unused and will be removed from module THREE_TO_ONE.
+WARNING: [Synth 8-3332] Sequential element (\out_reg[5] ) is unused and will be removed from module THREE_TO_ONE.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 669.668 ; gain = 496.160
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 669.668 ; gain = 496.160
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 669.668 ; gain = 496.160
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:14 ; elapsed = 00:01:20 . Memory (MB): peak = 669.668 ; gain = 496.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:21 . Memory (MB): peak = 669.668 ; gain = 496.160
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (\write_reg_select/out_reg[4] ) is unused and will be removed from module MULTI_CUCLE_CPU.
+WARNING: [Synth 8-3332] Sequential element (\write_reg_select/out_reg[3] ) is unused and will be removed from module MULTI_CUCLE_CPU.
+WARNING: [Synth 8-3332] Sequential element (\write_reg_select/out_reg[2] ) is unused and will be removed from module MULTI_CUCLE_CPU.
+WARNING: [Synth 8-3332] Sequential element (\write_reg_select/out_reg[1] ) is unused and will be removed from module MULTI_CUCLE_CPU.
+WARNING: [Synth 8-3332] Sequential element (\write_reg_select/out_reg[0] ) is unused and will be removed from module MULTI_CUCLE_CPU.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:28 ; elapsed = 00:01:36 . Memory (MB): peak = 739.156 ; gain = 565.648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:29 ; elapsed = 00:01:38 . Memory (MB): peak = 739.156 ; gain = 565.648
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:29 ; elapsed = 00:01:38 . Memory (MB): peak = 739.156 ; gain = 565.648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:30 ; elapsed = 00:01:38 . Memory (MB): peak = 739.156 ; gain = 565.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:01:30 ; elapsed = 00:01:38 . Memory (MB): peak = 739.156 ; gain = 565.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:30 ; elapsed = 00:01:39 . Memory (MB): peak = 739.156 ; gain = 565.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    57|
+|3     |LUT1   |   150|
+|4     |LUT2   |   126|
+|5     |LUT3   |   926|
+|6     |LUT4   |   214|
+|7     |LUT5   |   995|
+|8     |LUT6   |  2598|
+|9     |MUXF7  |   524|
+|10    |MUXF8  |    50|
+|11    |FDCE   |    32|
+|12    |FDRE   |  1241|
+|13    |LD     |   800|
+|14    |IBUF   |     5|
+|15    |OBUF   |    11|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------+--------------+------+
+|      |Instance            |Module        |Cells |
++------+--------------------+--------------+------+
+|1     |top                 |              |  7731|
+|2     |  ALU_select_A      |TWO_TO_ONE    |     9|
+|3     |  ALU_select_B      |TWO_TO_ONE_0  |    23|
+|4     |  adr               |DR            |    39|
+|5     |  aluoutdr          |DR_1          |   806|
+|6     |  bdr               |DR_2          |  1632|
+|7     |  d_flip_flop       |D_FLIP_FLOP   |    13|
+|8     |  data_mem          |DATA_MEM      |  2237|
+|9     |  db_data_select    |TWO_TO_ONE_3  |    27|
+|10    |  dbdr              |DR_4          |    34|
+|11    |  ir                |IR            |   586|
+|12    |  pc                |PC            |   177|
+|13    |  pc_add_four       |PC_ADD_FOUR   |     9|
+|14    |  pc_offset         |PC_OFFSET     |    38|
+|15    |  pc_select         |FOUR_TO_ONE   |    14|
+|16    |  register_file     |REGISTER_FILE |  1900|
+|17    |  seg1              |SegLED        |     2|
+|18    |  seg10             |SegLED_5      |     7|
+|19    |  seg15             |SegLED_6      |     7|
+|20    |  seg16             |SegLED_7      |     5|
+|21    |  seg2              |SegLED_8      |     2|
+|22    |  seg3              |SegLED_9      |     7|
+|23    |  seg4              |SegLED_10     |     8|
+|24    |  seg6              |SegLED_11     |     7|
+|25    |  write_data_select |TWO_TO_ONE_12 |    32|
++------+--------------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:30 ; elapsed = 00:01:39 . Memory (MB): peak = 739.156 ; gain = 565.648
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 133 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:14 ; elapsed = 00:01:27 . Memory (MB): peak = 739.156 ; gain = 230.508
+Synthesis Optimization Complete : Time (s): cpu = 00:01:31 ; elapsed = 00:01:39 . Memory (MB): peak = 739.156 ; gain = 565.648
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 862 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 3 inverter(s) to 1063 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 800 instances were transformed.
+  LD => LDCE: 800 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+201 Infos, 157 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:32 ; elapsed = 00:01:39 . Memory (MB): peak = 739.156 ; gain = 528.520
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.268 . Memory (MB): peak = 739.156 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 22 08:40:37 2018...
