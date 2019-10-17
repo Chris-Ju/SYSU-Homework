@@ -146,11 +146,11 @@ fmt.Println("Username or password wrong.")
 ## 测试
 
 注册
-![0](./image/homework5/0.png)
+![0](./image/homework7/0.png)
 
 登录
 
-![1](./image/homework5/1.png)
+![1](./image/homework7/1.png)
 
 
 [项目地址](http://139.9.57.167:20080/share/bmjdnsu76kvs669u1v9g?secret=false)
